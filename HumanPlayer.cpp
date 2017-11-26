@@ -21,18 +21,15 @@ Point HumanPlayer::getPoint(vector<Path> paths) {
     cout << playerMark << ":It's your move" << endl << "Your possible moves: ";
     printOptions(paths);
     cout << endl << "Please enter your move row(space)col: ";
-    //scanf("%d,%d", &row, &col);
     cin >> row >> col;
     if (cin.fail()) {
         cin.clear();
         cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-        p.x = -1;
-        p.y = -1;
         return p;
     }
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    p.x = row;
-    p.y = col;
+    p.SetX(row);
+    p.SetY(col);
     return p;
 }
 
@@ -42,10 +39,10 @@ void HumanPlayer::printOptions(vector<Path> paths) {
     {
         temp = it;
         if (++temp != paths.end())
-            if (it->src.x == temp->src.x &&
-                it->src.y == temp->src.y) {
+            if (it->getSource().GetX() == temp->getSource().GetX() &&
+                it->getSource().GetY() == temp->getSource().GetY()) {
                 continue;
             }
-        printf("(%d,%d) ", it->src.x + 1, it->src.y + 1);
+        printf("(%d, %d) ", it->getSource().GetX() + 1, it->getSource().GetY() + 1);
     }
 }

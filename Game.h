@@ -12,7 +12,7 @@
 #include <cmath>
 #include "GlobalDef.h"
 #include "Board.h"
-//#include "Player.h"
+#include "Path.h"
 #include "HumanPlayer.h"
 using namespace std;
 
@@ -42,7 +42,7 @@ private:
 	 * @param player current player
 	 * @return avalible point to make a move
 	 */
-	vector<Path> avaliblePoints(vector<Path> paths, Player *player);
+	vector<Path> availablePoints(vector<Path> paths, Player *player);
 	//bool isValidPoint(int player, int x, int y);
 	void reverseCells(Path path, Player *player);
     void printWinner(Board b);

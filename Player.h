@@ -8,6 +8,8 @@
 
 #include <vector>
 #include "GlobalDef.h"
+#include "Path.h"
+
 using namespace std;
 
 class Player {

@@ -4,6 +4,7 @@
  *
  */
 #include "Game.h"
+#include "Path.h"
 
 Game::Game() : b(8)
 {
@@ -24,29 +25,30 @@ void Game::play() {
 	//char playerMark;
 	//int row, col;
 	bool running = true, validInput = false;
-	vector<Path> paths;
+	vector<Path> pathVector;
 	vector<Path> ::iterator it, temp;
-	Path path;
-    Point pnt;
-	while (running)
-	{
-		paths = avaliblePoints(paths, player);
-		if (paths.size() == 0) {
+    Point p1(0, 0), p2(0, 0);
+	Path path(p1, p2);
+    Point pnt(0, 0);
+	while (running) {
+		pathVector = availablePoints(pathVector, player);
+		if (pathVector.size() == 0) {
 			player = switchPlayer(player);
-			if (avaliblePoints(paths, player).size() == 0) {
-                running = false;
-                b.print();
-            }
+			if (availablePoints(pathVector, player).size() == 0) {
+				running = false;
+				b.print();
+			}
 			continue;
 		}
-        b.print();
+		b.print();
 
-        pnt = player->getPoint(paths);
-		for (it = paths.begin(); it != paths.end(); ++it)
-		{
-			if (it->src.x + 1 == pnt.x && it->src.y + 1 == pnt.y) {
+		pnt.setPoint(player->getPoint(pathVector));
+		for (it = pathVector.begin(); it != pathVector.end(); ++it) {
+			if (it->getSource().GetX() + 1 == pnt.GetX() && it->getSource().GetY() + 1 == pnt.GetY()) {
 				validInput = true;
-				path = *it;
+				Path tempPath = *it;
+				path.setSource(tempPath.getSource());
+				path.setDestination(tempPath.getDestination());
 				reverseCells(path, player);
 			}
 		}
@@ -56,9 +58,9 @@ void Game::play() {
 		} else {
 			cout << "Invalid input" << endl;
 		}
-		paths.clear();
+		pathVector.clear();
 	}
-	paths.clear();
+	pathVector.clear();
     printWinner(this->b);
     cout << "Game ended" << endl;
 }
@@ -70,31 +72,24 @@ Player* Game::switchPlayer(Player *player) {
 	return player1;
 }
 
-vector<Path> Game::avaliblePoints(vector<Path> paths, Player *player) {
-	Path p;
+vector<Path> Game::availablePoints(vector<Path> pathVector, Player *player) {
 	int row, column;
-	int opponet = switchPlayer(player)->getSign();
+	int opponent = switchPlayer(player)->getSign();
 	int size = b.getSize();
-	for (int x = 0; x < size; x++)
-	{
-		for (int y = 0; y < size; y++)
-		{
+	for (int x = 0; x < size; x++) {
+		for (int y = 0; y < size; y++) {
 			if (b.getCell(x, y) != blank) continue;
-			for (int xDelta = -1; xDelta <= 1; xDelta++)
-			{
-				for (int yDelta = -1; yDelta <= 1; yDelta++)
-				{
+			for (int xDelta = -1; xDelta <= 1; xDelta++) {
+				for (int yDelta = -1; yDelta <= 1; yDelta++) {
 					/* Don't check outside the array, or the current square */
 					if (x + xDelta < 0 || x + xDelta >= size || y + yDelta < 0 ||
 						y + yDelta >= size || (xDelta == 0 && yDelta == 0))
 						continue;
-					if (b.getCell(x + xDelta, y + yDelta) == opponet)
-					{
+					if (b.getCell(x + xDelta, y + yDelta) == opponent) {
 						row = x + xDelta;
 						column = y + yDelta;
 
-						for (;;)
-						{
+						for (;;) {
 							row += xDelta;
 							column += yDelta;
 							if (row < 0 || row >= size || column < 0 || column >= size)
@@ -102,12 +97,10 @@ vector<Path> Game::avaliblePoints(vector<Path> paths, Player *player) {
 							if (b.getCell(row, column) == blank)
 								break;
 							if (b.getCell(row, column) == player->getSign()) {
-								p.src.x = x;
-                                p.src.y = y;
-								p.dst.x = row;
-                                p.dst.y = column;
-								paths.insert(paths.begin(), p);
-								//yDelta = xDelta = 1;
+								Point src(x, y);
+                                Point dst(row, column);
+								Path path(src, dst);
+								pathVector.insert(pathVector.begin(), path);
 								break;
 							}
 						}
@@ -116,25 +109,21 @@ vector<Path> Game::avaliblePoints(vector<Path> paths, Player *player) {
 			}
 		}
 	}
-	return paths;
+	return pathVector;
 }
 
 void Game::reverseCells(Path path, Player *player) {
-	int xDelta = path.dst.x - path.src.x;
-	int yDelta = path.dst.y - path.src.y;
+	int xDelta = path.getDestination().GetX() - path.getSource().GetX();
+	int yDelta = path.getDestination().GetY() - path.getSource().GetY();
 	xDelta = xDelta == 0 ? 0 : xDelta / abs((double)xDelta);
 	yDelta = yDelta == 0 ? 0 : yDelta / abs((double)yDelta);
-	int row = path.src.x, col = path.src.y;
+	int row = path.getSource().GetX(), col = path.getSource().GetY();
 	do {
 		b.setMark(row, col, player->getSign());
 		row += xDelta;
 		col += yDelta;		
 	} while (b.getCell(row, col) != player->getSign());
 }
-
-/*bool Game::isValidPoint(int opponet, int x, int y) {
-	return true;
-}*/
 
 void Game::printWinner(Board b) {
     int i,j, temp;
