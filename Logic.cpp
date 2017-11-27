@@ -8,6 +8,7 @@ Logic::Logic(Board b) : board(b) {}
 
 Logic::~Logic() {
     this->board.freeAllocations();
+    //delete this->board;
 }
 
 vector<Path> Logic::availablePoints(vector<Path> pathVector, int player) {
@@ -50,17 +51,17 @@ vector<Path> Logic::availablePoints(vector<Path> pathVector, int player) {
     return pathVector;
 }
 
-void Logic::reverseCells(Path path, Player *player) {
+void Logic::reverseCells(Path path, int player) {
     int xDelta = path.getDestination().GetX() - path.getSource().GetX();
     int yDelta = path.getDestination().GetY() - path.getSource().GetY();
     xDelta = xDelta == 0 ? 0 : xDelta / abs((double)xDelta);
     yDelta = yDelta == 0 ? 0 : yDelta / abs((double)yDelta);
     int row = path.getSource().GetX(), col = path.getSource().GetY();
     do {
-        board.setMark(row, col, player->getSign());
+        board.setMark(row, col, player);
         row += xDelta;
         col += yDelta;
-    } while (board.getCell(row, col) != player->getSign());
+    } while (board.getCell(row, col) != player);
 }
 
 Board Logic::getBoard() {

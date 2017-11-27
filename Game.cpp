@@ -4,12 +4,11 @@
  *
  */
 #include "Game.h"
-#include "Path.h"
 
 Game::Game() : b(4)
 {
     player1 = new HumanPlayer(black);
-    player2 = new HumanPlayer(white);
+    player2 = new ComPlayer(white);
 	logic = new Logic(b);
 }
 
@@ -46,12 +45,12 @@ void Game::play() {
 
 		pnt.setPoint(player->getPoint(pathVector, this->b));
 		for (it = pathVector.begin(); it != pathVector.end(); ++it) {
-			if (it->getSource().GetX() + 1 == pnt.GetX() && it->getSource().GetY() + 1 == pnt.GetY()) {
+			if (it->getSource().GetX() == pnt.GetX() && it->getSource().GetY() == pnt.GetY()) {
 				validInput = true;
 				Path tempPath = *it;
 				path.setSource(tempPath.getSource());
 				path.setDestination(tempPath.getDestination());
-				logic->reverseCells(path, player);
+				logic->reverseCells(path, player->getSign());
 			}
 		}
 		if (validInput) {

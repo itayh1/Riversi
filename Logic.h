@@ -22,7 +22,7 @@ public:
 	 */
     vector<Path> availablePoints(vector<Path> pathVector,
                                  int player);
-    void reverseCells(Path path, Player *player);
+    void reverseCells(Path path, int player);
     Board getBoard();
     int switchSign(int sign);
 

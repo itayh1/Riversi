@@ -28,8 +28,8 @@ Point HumanPlayer::getPoint(vector<Path> paths, Board board) {
         return p;
     }
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    p.SetX(row);
-    p.SetY(col);
+    p.SetX(row - 1);
+    p.SetY(col - 1);
     return p;
 }
 

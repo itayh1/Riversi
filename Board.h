@@ -39,6 +39,7 @@ public:
 	Board* getCopy();
     int countBlack();
     int countWhite();
+	int countSign(int sign);
 	/**
 	 * free Board allocations
 	 */

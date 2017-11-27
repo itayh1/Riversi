@@ -13,6 +13,7 @@
 #include "Board.h"
 #include "Path.h"
 #include "HumanPlayer.h"
+#include "ComPlayer.h"
 #include "Logic.h"
 using namespace std;
 

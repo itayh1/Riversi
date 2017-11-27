@@ -102,7 +102,7 @@ int Board::countBlack() {
 	int count = 0;
 	for (int x = 0; x < size; x++) {
 		for (int y = 0; y < size; y++) {
-			if (board[x][x] == black)
+			if (board[x][y] == black)
 				++count;
 		}
 	}
@@ -113,7 +113,18 @@ int Board::countWhite() {
 	int count = 0;
 	for (int x = 0; x < size; x++) {
 		for (int y = 0; y < size; y++) {
-			if (board[x][x] == white)
+			if (board[x][y] == white)
+				++count;
+		}
+	}
+	return count;
+}
+
+int Board::countSign(int sign) {
+	int count = 0;
+	for (int x = 0; x < size; x++) {
+		for (int y = 0; y < size; y++) {
+			if (board[x][y] == sign)
 				++count;
 		}
 	}
