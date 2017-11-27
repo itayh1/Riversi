@@ -24,10 +24,10 @@ Board::Board(int size) {
 
 	this->size = size;
 
-	setMark(3, 3, white);
-	setMark(3, 4, black);
-	setMark(4, 4, white);
-	setMark(4, 3, black);
+	setMark(size/2 - 1, size/2 - 1, white);
+	setMark(size/2 - 1, size/2, black);
+	setMark(size/2, size/2, white);
+	setMark(size/2, size/2 - 1, black);
 }
 
 Board::~Board() {
@@ -69,6 +69,18 @@ void Board::print() {
 	cout << endl;
 }
 
+Board* Board::getCopy() {
+	Board *copy = new Board(size);
+
+	//copy array
+	for (int x = 0; x < size; x++) {
+		for (int y = 0; y < size; y++) {
+			copy->setMark(x, y, board[x][y]);
+		}
+	}
+	return copy;
+}
+
 int Board::getCell(int row, int column) {
 	return board[row][column];
 }
@@ -84,4 +96,26 @@ void Board::freeAllocations() {
 		delete[] board[i];
 	}
 	delete[] board;
+}
+
+int Board::countBlack() {
+	int count = 0;
+	for (int x = 0; x < size; x++) {
+		for (int y = 0; y < size; y++) {
+			if (board[x][x] == black)
+				++count;
+		}
+	}
+	return count;
+}
+
+int Board::countWhite() {
+	int count = 0;
+	for (int x = 0; x < size; x++) {
+		for (int y = 0; y < size; y++) {
+			if (board[x][x] == white)
+				++count;
+		}
+	}
+	return count;
 }

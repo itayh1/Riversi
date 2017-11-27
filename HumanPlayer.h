@@ -11,6 +11,7 @@
 #include <limits>
 #include "GlobalDef.h"
 #include "Player.h"
+#include "Board.h"
 
 using namespace std;
 
@@ -21,7 +22,7 @@ public:
     * @param paths list of paths
     * @return the the user chose
     */
-    Point getPoint(vector<Path> paths);
+    Point getPoint(vector<Path> paths, Board board);
     /**
      * @return the the sign ofthe player
      */

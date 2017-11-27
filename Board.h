@@ -34,6 +34,12 @@ public:
 	*/
 	void setMark(int row, int column, int m);
 	/**
+	 * @return a copy of the current board.
+	 */
+	Board* getCopy();
+    int countBlack();
+    int countWhite();
+	/**
 	 * free Board allocations
 	 */
 	void freeAllocations();

@@ -6,16 +6,18 @@
 #include "Game.h"
 #include "Path.h"
 
-Game::Game() : b(8)
+Game::Game() : b(4)
 {
     player1 = new HumanPlayer(black);
     player2 = new HumanPlayer(white);
+	logic = new Logic(b);
 }
 
 Game::~Game()
 {
     delete player1;
     delete player2;
+    delete logic;
 	b.freeAllocations();
 }
 
@@ -31,10 +33,10 @@ void Game::play() {
 	Path path(p1, p2);
     Point pnt(0, 0);
 	while (running) {
-		pathVector = availablePoints(pathVector, player);
+		pathVector = logic->availablePoints(pathVector, player->getSign());
 		if (pathVector.size() == 0) {
 			player = switchPlayer(player);
-			if (availablePoints(pathVector, player).size() == 0) {
+			if (logic->availablePoints(pathVector, player->getSign()).size() == 0) {
 				running = false;
 				b.print();
 			}
@@ -42,14 +44,14 @@ void Game::play() {
 		}
 		b.print();
 
-		pnt.setPoint(player->getPoint(pathVector));
+		pnt.setPoint(player->getPoint(pathVector, this->b));
 		for (it = pathVector.begin(); it != pathVector.end(); ++it) {
 			if (it->getSource().GetX() + 1 == pnt.GetX() && it->getSource().GetY() + 1 == pnt.GetY()) {
 				validInput = true;
 				Path tempPath = *it;
 				path.setSource(tempPath.getSource());
 				path.setDestination(tempPath.getDestination());
-				reverseCells(path, player);
+				logic->reverseCells(path, player);
 			}
 		}
 		if (validInput) {
@@ -72,6 +74,7 @@ Player* Game::switchPlayer(Player *player) {
 	return player1;
 }
 
+/*
 vector<Path> Game::availablePoints(vector<Path> pathVector, Player *player) {
 	int row, column;
 	int opponent = switchPlayer(player)->getSign();
@@ -81,7 +84,7 @@ vector<Path> Game::availablePoints(vector<Path> pathVector, Player *player) {
 			if (b.getCell(x, y) != blank) continue;
 			for (int xDelta = -1; xDelta <= 1; xDelta++) {
 				for (int yDelta = -1; yDelta <= 1; yDelta++) {
-					/* Don't check outside the array, or the current square */
+					// Don't check outside the array, or the current square
 					if (x + xDelta < 0 || x + xDelta >= size || y + yDelta < 0 ||
 						y + yDelta >= size || (xDelta == 0 && yDelta == 0))
 						continue;
@@ -124,6 +127,7 @@ void Game::reverseCells(Path path, Player *player) {
 		col += yDelta;		
 	} while (b.getCell(row, col) != player->getSign());
 }
+*/
 
 void Game::printWinner(Board b) {
     int i,j, temp;

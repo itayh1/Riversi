@@ -14,7 +14,7 @@ int HumanPlayer::getSign() {
     return sign;
 }
 
-Point HumanPlayer::getPoint(vector<Path> paths) {
+Point HumanPlayer::getPoint(vector<Path> paths, Board board) {
     Point p;
     int row, col;
     char playerMark = (sign == black) ? 'X' : 'O';
