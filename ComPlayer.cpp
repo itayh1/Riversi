@@ -19,7 +19,7 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
         vector<Path> newMoves;
         logic = new Logic(*(board.getCopy()));
         logic->reverseCells(*it,this);
-        logic->availablePoints(newMoves, this->sign);
+        logic->availablePoints(newMoves, logic->switchSign(this->sign));
         for (innerIt = paths.begin(); innerIt != paths.end(); ++innerIt) {
 
         }

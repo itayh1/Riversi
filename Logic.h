@@ -24,9 +24,12 @@ public:
                                  int player);
     void reverseCells(Path path, Player *player);
     Board getBoard();
+    int switchSign(int sign);
 
 private:
     Board board;
+
+
 };
 
 

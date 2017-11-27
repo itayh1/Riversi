@@ -66,3 +66,10 @@ void Logic::reverseCells(Path path, Player *player) {
 Board Logic::getBoard() {
     return this->board;
 }
+
+int Logic::switchSign(int sign) {
+    if (sign == black)
+        return white;
+    return black;
+}
+
