@@ -27,6 +27,8 @@ public:
      * @return the the sign ofthe player
      */
     int getSign();
+    //print the moved this player played.
+    void printMovePlayed(Point &p);
 
 private:
     /**

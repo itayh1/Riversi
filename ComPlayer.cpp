@@ -13,12 +13,14 @@ int ComPlayer::getSign() {
 Point ComPlayer::getPoint(vector<Path> paths, Board board) {
     vector<Path> ::iterator it, innerIt;
     Point bestPoint, opponentBestPoint;
+    int boardPanels = board.getSize() * board.getSize();
     //bestScore is the best score that cannot be reached
-    int bestScore = board.getSize() * board.getSize(), opponentScore = 0, tempScore;
+    int bestScore = boardPanels, opponentScore, tempScore;
     int opponentSign = this->sign == black ? white : black;
     Logic *logic, *opponetLogic;
     for (it = paths.begin(); it != paths.end(); ++it) {
         vector<Path> newMoves;
+        opponentScore = -1 * boardPanels;
         //copy of the board
         logic = new Logic(*(board.getCopy()));
         //make move
@@ -30,7 +32,6 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
             return it->getSource();
         }
         for (innerIt = newMoves.begin(); innerIt != newMoves.end(); ++innerIt) {
-            opponentScore = 0;
             opponetLogic = new Logic(*(logic->getBoard().getCopy()));
             opponetLogic->reverseCells(*innerIt, opponetLogic->switchSign(this->sign));
             Board tempBoard = opponetLogic->getBoard();
@@ -50,4 +51,10 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
         delete logic;
     }
     return bestPoint;
+}
+
+void ComPlayer::printMovePlayed(Point &p) {
+    char ch = sign == black ? 'X' : 'O';
+    cout << ch << " played ";
+    p.PrintPoint();
 }

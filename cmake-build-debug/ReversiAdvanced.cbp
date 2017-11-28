@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ReversiAdvanced"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/itay/Desktop/git/Riversi/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/itay/Desktop/git/Riversi/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/itay/Desktop/git/Riversi/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ReversiAdvanced">
+				<Option output="/home/itay/Desktop/git/Riversi/cmake-build-debug/ReversiAdvanced" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/Desktop/git/Riversi/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 ReversiAdvanced"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ReversiAdvanced/fast">
+				<Option output="/home/itay/Desktop/git/Riversi/cmake-build-debug/ReversiAdvanced" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/Desktop/git/Riversi/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 ReversiAdvanced/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/Desktop/git/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Board.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Board.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/ComPlayer.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/ComPlayer.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Game.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Game.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/GlobalDef.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/HumanPlayer.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/HumanPlayer.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Logic.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Logic.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Path.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Path.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Player.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Player.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Point.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/Point.h">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/main.cpp">
+			<Option target="ReversiAdvanced"/>
+		</Unit>
+		<Unit filename="/home/itay/Desktop/git/Riversi/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -26,6 +26,7 @@ public:
 	 * run the game.
 	 */
 	void play();
+	void chooseMenu();
 
 private:
 	//board of the game

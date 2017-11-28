@@ -46,3 +46,9 @@ void HumanPlayer::printOptions(vector<Path> paths) {
         printf("(%d, %d) ", it->getSource().GetX() + 1, it->getSource().GetY() + 1);
     }
 }
+
+void HumanPlayer::printMovePlayed(Point &p) {
+    /*char ch = sign == black ? 'X' : 'O';
+    cout << ch << " played ";
+    p.PrintPoint();*/
+}
