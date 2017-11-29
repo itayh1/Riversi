@@ -37,8 +37,7 @@ public:
 	 * @return a copy of the current board.
 	 */
 	Board* getCopy();
-    int countBlack();
-    int countWhite();
+	//count how many times "sign" is in the board.
 	int countSign(int sign);
 	/**
 	 * free Board allocations
