@@ -1,24 +1,22 @@
-/*
- * HumanPlayer.h
- * Itay Hassid
- *
- */
-#ifndef HumanPlayer_H_
-#define HumanPlayer_H_
+//
+// Created by Itay Hassid.
+//
+
+#ifndef REVERSIADVANCED_COMPLAYER_H
+#define REVERSIADVANCED_COMPLAYER_H
 
 #include <iostream>
 #include <stdio.h>
-#include <limits>
 #include "GlobalDef.h"
 #include "Player.h"
-#include "Board.h"
+#include "Logic.h"
 
 using namespace std;
 
-class HumanPlayer : public Player {
+class ComPlayer : public Player {
 public:
-    HumanPlayer(int sign);
-   /**
+    ComPlayer(int sign);
+    /**
     * @param paths list of paths
     * @return the the user chose
     */
@@ -29,12 +27,9 @@ public:
     int getSign();
     //print the moved this player played.
     void printMovePlayed(Point &p);
-
 private:
-    /**
-     * print the moves the user can make
-     * @param paths
-     */
-    void printOptions(vector<Path> paths);
+    //int min(int num1, int )
 };
-#endif //Player_H_
+
+
+#endif //REVERSIADVANCED_COMPLAYER_H

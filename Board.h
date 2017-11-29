@@ -34,6 +34,12 @@ public:
 	*/
 	void setMark(int row, int column, int m);
 	/**
+	 * @return a copy of the current board.
+	 */
+	Board* getCopy();
+	//count how many times "sign" is in the board.
+	int countSign(int sign);
+	/**
 	 * free Board allocations
 	 */
 	void freeAllocations();

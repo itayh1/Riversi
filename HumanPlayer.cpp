@@ -14,7 +14,7 @@ int HumanPlayer::getSign() {
     return sign;
 }
 
-Point HumanPlayer::getPoint(vector<Path> paths) {
+Point HumanPlayer::getPoint(vector<Path> paths, Board board) {
     Point p;
     int row, col;
     char playerMark = (sign == black) ? 'X' : 'O';
@@ -28,8 +28,8 @@ Point HumanPlayer::getPoint(vector<Path> paths) {
         return p;
     }
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    p.SetX(row);
-    p.SetY(col);
+    p.SetX(row - 1);
+    p.SetY(col - 1);
     return p;
 }
 
@@ -45,4 +45,10 @@ void HumanPlayer::printOptions(vector<Path> paths) {
             }
         printf("(%d, %d) ", it->getSource().GetX() + 1, it->getSource().GetY() + 1);
     }
+}
+
+void HumanPlayer::printMovePlayed(Point &p) {
+    /*char ch = sign == black ? 'X' : 'O';
+    cout << ch << " played ";
+    p.PrintPoint();*/
 }
