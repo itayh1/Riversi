@@ -1,0 +1,117 @@
+commit 0e416ff7ab0777ad25fee97e416f0ff4431887cd
+Merge: eb1a0ea c9528d2
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Wed Nov 29 15:16:55 2017 +0200
+
+    Merge pull request #1 from itayh1/itay
+    
+    Itay
+
+commit c9528d2e0826722084746a4b7dbf3b9faf79529b
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Wed Nov 29 15:11:54 2017 +0200
+
+    Update Board.h
+
+commit ae1579da8a3c4d1a527e25d29fc48b5c67ca55c8
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Wed Nov 29 15:10:34 2017 +0200
+
+    remove useless functions
+
+commit c478c23565e1ff3444238676efd4ea4f57853df7
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Wed Nov 29 01:17:48 2017 +0200
+
+    fix AI crash problem and added choose menu
+
+commit a85d79c57766e7128c68e81d4599b0cd89b12779
+Author: itay <itayh.msn@hotmail.com>
+Date:   Mon Nov 27 22:33:59 2017 +0200
+
+    complete AI but crashed once.
+
+commit e38405f4b14d0f7b3af9657bac2561a5f318b619
+Author: itay <itayh.msn@hotmail.com>
+Date:   Sun Nov 26 17:37:34 2017 -0800
+
+    minimal changes
+
+commit 104b6ab3658dea928386356137d003749d29921c
+Author: itay <itayh.msn@hotmail.com>
+Date:   Sun Nov 26 17:27:34 2017 -0800
+
+    Add Logic class and ComPlayer class which implement Player interface.
+    start working on "minimax" algorithm.
+
+commit 0e416ff7ab0777ad25fee97e416f0ff4431887cd
+commit 0e416ff7ab0777ad25fee97e416f0ff4431887cd
+Merge: eb1a0ea c9528d2
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Wed Nov 29 15:16:55 2017 +0200
+
+    Merge pull request #1 from itayh1/itay
+    
+    Itay
+
+commit c9528d2e0826722084746a4b7dbf3b9faf79529b
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Wed Nov 29 15:11:54 2017 +0200
+
+    Update Board.h
+
+commit ae1579da8a3c4d1a527e25d29fc48b5c67ca55c8
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Wed Nov 29 15:10:34 2017 +0200
+
+    remove useless functions
+
+commit c478c23565e1ff3444238676efd4ea4f57853df7
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Wed Nov 29 01:17:48 2017 +0200
+
+    fix AI crash problem and added choose menu
+
+commit a85d79c57766e7128c68e81d4599b0cd89b12779
+Author: itay <itayh.msn@hotmail.com>
+Date:   Mon Nov 27 22:33:59 2017 +0200
+
+    complete AI but crashed once.
+
+commit e38405f4b14d0f7b3af9657bac2561a5f318b619
+Author: itay <itayh.msn@hotmail.com>
+Date:   Sun Nov 26 17:37:34 2017 -0800
+
+    minimal changes
+
+commit 104b6ab3658dea928386356137d003749d29921c
+Author: itay <itayh.msn@hotmail.com>
+Date:   Sun Nov 26 17:27:34 2017 -0800
+
+    Add Logic class and ComPlayer class which implement Player interface.
+    start working on "minimax" algorithm.
+
+commit eb1a0ea1785a6a59112ba1c3e193a562fe6ea092
+Author: Nadav Gross <33874964+nadavgross@users.noreply.github.com>
+Date:   Sun Nov 26 21:53:29 2017 +0200
+
+    Add files via upload
+
+commit b6e5b33da1654b3a747d505d7d80b267b4773165
+Author: Nadav Gross <33874964+nadavgross@users.noreply.github.com>
+Date:   Sun Nov 26 21:32:18 2017 +0200
+
+    Add files via upload
+
+commit d5bb9902de4d2950bab79b54c34f0700b0739f18
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Tue Nov 21 18:46:46 2017 +0200
+
+    main files
+
+commit 3a35c38b596c41390e4b411f0657daa428467eb2
+Author: itayh1 <itayh.msn@hotmail.com>
+Date:   Tue Nov 21 18:40:20 2017 +0200
+
+    Initial commit
+
