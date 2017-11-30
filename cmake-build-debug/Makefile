@@ -39,27 +39,73 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
+RM = /home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itay/Desktop/git/Riversi
+CMAKE_SOURCE_DIR = /home/nadavgross/CLionProjects/Riversi
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itay/Desktop/git/Riversi/cmake-build-debug
+CMAKE_BINARY_DIR = /home/nadavgross/CLionProjects/Riversi/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +116,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itay/Desktop/git/Riversi/cmake-build-debug/CMakeFiles /home/itay/Desktop/git/Riversi/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itay/Desktop/git/Riversi/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,260 +157,565 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ReversiAdvanced
+# Target rules for targets named run_tests
 
 # Build rule for target.
-ReversiAdvanced: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ReversiAdvanced
-.PHONY : ReversiAdvanced
+run_tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests
+.PHONY : run_tests
 
 # fast build rule for target.
-ReversiAdvanced/fast:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/build
-.PHONY : ReversiAdvanced/fast
+run_tests/fast:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
+.PHONY : run_tests/fast
 
-Board.o: Board.cpp.o
+#=============================================================================
+# Target rules for targets named run_main
 
-.PHONY : Board.o
+# Build rule for target.
+run_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_main
+.PHONY : run_main
 
-# target to build an object file
-Board.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Board.cpp.o
-.PHONY : Board.cpp.o
+# fast build rule for target.
+run_main/fast:
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/build
+.PHONY : run_main/fast
 
-Board.i: Board.cpp.i
+#=============================================================================
+# Target rules for targets named gmock_main
 
-.PHONY : Board.i
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
 
-# target to preprocess a source file
-Board.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Board.cpp.i
-.PHONY : Board.cpp.i
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
 
-Board.s: Board.cpp.s
+#=============================================================================
+# Target rules for targets named gmock
 
-.PHONY : Board.s
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
 
-# target to generate assembly for a file
-Board.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Board.cpp.s
-.PHONY : Board.cpp.s
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest-master/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
 
-ComPlayer.o: ComPlayer.cpp.o
+#=============================================================================
+# Target rules for targets named gtest_main
 
-.PHONY : ComPlayer.o
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
 
-# target to build an object file
-ComPlayer.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/ComPlayer.cpp.o
-.PHONY : ComPlayer.cpp.o
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
-ComPlayer.i: ComPlayer.cpp.i
+#=============================================================================
+# Target rules for targets named gtest
 
-.PHONY : ComPlayer.i
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
 
-# target to preprocess a source file
-ComPlayer.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/ComPlayer.cpp.i
-.PHONY : ComPlayer.cpp.i
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/build.make lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
 
-ComPlayer.s: ComPlayer.cpp.s
+Test/BoardTest.o: Test/BoardTest.cpp.o
 
-.PHONY : ComPlayer.s
-
-# target to generate assembly for a file
-ComPlayer.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/ComPlayer.cpp.s
-.PHONY : ComPlayer.cpp.s
-
-Game.o: Game.cpp.o
-
-.PHONY : Game.o
-
-# target to build an object file
-Game.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Game.cpp.o
-.PHONY : Game.cpp.o
-
-Game.i: Game.cpp.i
-
-.PHONY : Game.i
-
-# target to preprocess a source file
-Game.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Game.cpp.i
-.PHONY : Game.cpp.i
-
-Game.s: Game.cpp.s
-
-.PHONY : Game.s
-
-# target to generate assembly for a file
-Game.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Game.cpp.s
-.PHONY : Game.cpp.s
-
-HumanPlayer.o: HumanPlayer.cpp.o
-
-.PHONY : HumanPlayer.o
+.PHONY : Test/BoardTest.o
 
 # target to build an object file
-HumanPlayer.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/HumanPlayer.cpp.o
-.PHONY : HumanPlayer.cpp.o
+Test/BoardTest.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/BoardTest.cpp.o
+.PHONY : Test/BoardTest.cpp.o
 
-HumanPlayer.i: HumanPlayer.cpp.i
+Test/BoardTest.i: Test/BoardTest.cpp.i
 
-.PHONY : HumanPlayer.i
+.PHONY : Test/BoardTest.i
 
 # target to preprocess a source file
-HumanPlayer.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/HumanPlayer.cpp.i
-.PHONY : HumanPlayer.cpp.i
+Test/BoardTest.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/BoardTest.cpp.i
+.PHONY : Test/BoardTest.cpp.i
 
-HumanPlayer.s: HumanPlayer.cpp.s
+Test/BoardTest.s: Test/BoardTest.cpp.s
 
-.PHONY : HumanPlayer.s
+.PHONY : Test/BoardTest.s
 
 # target to generate assembly for a file
-HumanPlayer.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/HumanPlayer.cpp.s
-.PHONY : HumanPlayer.cpp.s
+Test/BoardTest.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/BoardTest.cpp.s
+.PHONY : Test/BoardTest.cpp.s
 
-Logic.o: Logic.cpp.o
+Test/ComPlayerTest.o: Test/ComPlayerTest.cpp.o
 
-.PHONY : Logic.o
+.PHONY : Test/ComPlayerTest.o
 
 # target to build an object file
-Logic.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Logic.cpp.o
-.PHONY : Logic.cpp.o
+Test/ComPlayerTest.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/ComPlayerTest.cpp.o
+.PHONY : Test/ComPlayerTest.cpp.o
 
-Logic.i: Logic.cpp.i
+Test/ComPlayerTest.i: Test/ComPlayerTest.cpp.i
 
-.PHONY : Logic.i
+.PHONY : Test/ComPlayerTest.i
 
 # target to preprocess a source file
-Logic.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Logic.cpp.i
-.PHONY : Logic.cpp.i
+Test/ComPlayerTest.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/ComPlayerTest.cpp.i
+.PHONY : Test/ComPlayerTest.cpp.i
 
-Logic.s: Logic.cpp.s
+Test/ComPlayerTest.s: Test/ComPlayerTest.cpp.s
 
-.PHONY : Logic.s
+.PHONY : Test/ComPlayerTest.s
 
 # target to generate assembly for a file
-Logic.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Logic.cpp.s
-.PHONY : Logic.cpp.s
+Test/ComPlayerTest.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/ComPlayerTest.cpp.s
+.PHONY : Test/ComPlayerTest.cpp.s
 
-Path.o: Path.cpp.o
+Test/GameTest.o: Test/GameTest.cpp.o
 
-.PHONY : Path.o
+.PHONY : Test/GameTest.o
 
 # target to build an object file
-Path.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Path.cpp.o
-.PHONY : Path.cpp.o
+Test/GameTest.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/GameTest.cpp.o
+.PHONY : Test/GameTest.cpp.o
 
-Path.i: Path.cpp.i
+Test/GameTest.i: Test/GameTest.cpp.i
 
-.PHONY : Path.i
+.PHONY : Test/GameTest.i
 
 # target to preprocess a source file
-Path.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Path.cpp.i
-.PHONY : Path.cpp.i
+Test/GameTest.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/GameTest.cpp.i
+.PHONY : Test/GameTest.cpp.i
 
-Path.s: Path.cpp.s
+Test/GameTest.s: Test/GameTest.cpp.s
 
-.PHONY : Path.s
+.PHONY : Test/GameTest.s
 
 # target to generate assembly for a file
-Path.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Path.cpp.s
-.PHONY : Path.cpp.s
+Test/GameTest.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/GameTest.cpp.s
+.PHONY : Test/GameTest.cpp.s
 
-Player.o: Player.cpp.o
+Test/Gtest_main.o: Test/Gtest_main.cpp.o
 
-.PHONY : Player.o
+.PHONY : Test/Gtest_main.o
 
 # target to build an object file
-Player.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Player.cpp.o
-.PHONY : Player.cpp.o
+Test/Gtest_main.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/Gtest_main.cpp.o
+.PHONY : Test/Gtest_main.cpp.o
 
-Player.i: Player.cpp.i
+Test/Gtest_main.i: Test/Gtest_main.cpp.i
 
-.PHONY : Player.i
+.PHONY : Test/Gtest_main.i
 
 # target to preprocess a source file
-Player.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Player.cpp.i
-.PHONY : Player.cpp.i
+Test/Gtest_main.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/Gtest_main.cpp.i
+.PHONY : Test/Gtest_main.cpp.i
 
-Player.s: Player.cpp.s
+Test/Gtest_main.s: Test/Gtest_main.cpp.s
 
-.PHONY : Player.s
+.PHONY : Test/Gtest_main.s
 
 # target to generate assembly for a file
-Player.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Player.cpp.s
-.PHONY : Player.cpp.s
+Test/Gtest_main.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/Gtest_main.cpp.s
+.PHONY : Test/Gtest_main.cpp.s
 
-Point.o: Point.cpp.o
+Test/HumanPlayerTest.o: Test/HumanPlayerTest.cpp.o
 
-.PHONY : Point.o
+.PHONY : Test/HumanPlayerTest.o
 
 # target to build an object file
-Point.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Point.cpp.o
-.PHONY : Point.cpp.o
+Test/HumanPlayerTest.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/HumanPlayerTest.cpp.o
+.PHONY : Test/HumanPlayerTest.cpp.o
 
-Point.i: Point.cpp.i
+Test/HumanPlayerTest.i: Test/HumanPlayerTest.cpp.i
 
-.PHONY : Point.i
+.PHONY : Test/HumanPlayerTest.i
 
 # target to preprocess a source file
-Point.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Point.cpp.i
-.PHONY : Point.cpp.i
+Test/HumanPlayerTest.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/HumanPlayerTest.cpp.i
+.PHONY : Test/HumanPlayerTest.cpp.i
 
-Point.s: Point.cpp.s
+Test/HumanPlayerTest.s: Test/HumanPlayerTest.cpp.s
 
-.PHONY : Point.s
+.PHONY : Test/HumanPlayerTest.s
 
 # target to generate assembly for a file
-Point.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/Point.cpp.s
-.PHONY : Point.cpp.s
+Test/HumanPlayerTest.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/HumanPlayerTest.cpp.s
+.PHONY : Test/HumanPlayerTest.cpp.s
 
-main.o: main.cpp.o
+Test/LogicTest.o: Test/LogicTest.cpp.o
 
-.PHONY : main.o
+.PHONY : Test/LogicTest.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/main.cpp.o
-.PHONY : main.cpp.o
+Test/LogicTest.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/LogicTest.cpp.o
+.PHONY : Test/LogicTest.cpp.o
 
-main.i: main.cpp.i
+Test/LogicTest.i: Test/LogicTest.cpp.i
 
-.PHONY : main.i
+.PHONY : Test/LogicTest.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/main.cpp.i
-.PHONY : main.cpp.i
+Test/LogicTest.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/LogicTest.cpp.i
+.PHONY : Test/LogicTest.cpp.i
 
-main.s: main.cpp.s
+Test/LogicTest.s: Test/LogicTest.cpp.s
 
-.PHONY : main.s
+.PHONY : Test/LogicTest.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/ReversiAdvanced.dir/build.make CMakeFiles/ReversiAdvanced.dir/main.cpp.s
-.PHONY : main.cpp.s
+Test/LogicTest.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/LogicTest.cpp.s
+.PHONY : Test/LogicTest.cpp.s
+
+Test/PathTest.o: Test/PathTest.cpp.o
+
+.PHONY : Test/PathTest.o
+
+# target to build an object file
+Test/PathTest.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/PathTest.cpp.o
+.PHONY : Test/PathTest.cpp.o
+
+Test/PathTest.i: Test/PathTest.cpp.i
+
+.PHONY : Test/PathTest.i
+
+# target to preprocess a source file
+Test/PathTest.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/PathTest.cpp.i
+.PHONY : Test/PathTest.cpp.i
+
+Test/PathTest.s: Test/PathTest.cpp.s
+
+.PHONY : Test/PathTest.s
+
+# target to generate assembly for a file
+Test/PathTest.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/PathTest.cpp.s
+.PHONY : Test/PathTest.cpp.s
+
+Test/PointTest.o: Test/PointTest.cpp.o
+
+.PHONY : Test/PointTest.o
+
+# target to build an object file
+Test/PointTest.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/PointTest.cpp.o
+.PHONY : Test/PointTest.cpp.o
+
+Test/PointTest.i: Test/PointTest.cpp.i
+
+.PHONY : Test/PointTest.i
+
+# target to preprocess a source file
+Test/PointTest.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/PointTest.cpp.i
+.PHONY : Test/PointTest.cpp.i
+
+Test/PointTest.s: Test/PointTest.cpp.s
+
+.PHONY : Test/PointTest.s
+
+# target to generate assembly for a file
+Test/PointTest.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/Test/PointTest.cpp.s
+.PHONY : Test/PointTest.cpp.s
+
+src/Board.o: src/Board.cpp.o
+
+.PHONY : src/Board.o
+
+# target to build an object file
+src/Board.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Board.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Board.cpp.o
+.PHONY : src/Board.cpp.o
+
+src/Board.i: src/Board.cpp.i
+
+.PHONY : src/Board.i
+
+# target to preprocess a source file
+src/Board.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Board.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Board.cpp.i
+.PHONY : src/Board.cpp.i
+
+src/Board.s: src/Board.cpp.s
+
+.PHONY : src/Board.s
+
+# target to generate assembly for a file
+src/Board.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Board.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Board.cpp.s
+.PHONY : src/Board.cpp.s
+
+src/ComPlayer.o: src/ComPlayer.cpp.o
+
+.PHONY : src/ComPlayer.o
+
+# target to build an object file
+src/ComPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/ComPlayer.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/ComPlayer.cpp.o
+.PHONY : src/ComPlayer.cpp.o
+
+src/ComPlayer.i: src/ComPlayer.cpp.i
+
+.PHONY : src/ComPlayer.i
+
+# target to preprocess a source file
+src/ComPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/ComPlayer.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/ComPlayer.cpp.i
+.PHONY : src/ComPlayer.cpp.i
+
+src/ComPlayer.s: src/ComPlayer.cpp.s
+
+.PHONY : src/ComPlayer.s
+
+# target to generate assembly for a file
+src/ComPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/ComPlayer.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/ComPlayer.cpp.s
+.PHONY : src/ComPlayer.cpp.s
+
+src/Game.o: src/Game.cpp.o
+
+.PHONY : src/Game.o
+
+# target to build an object file
+src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Game.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Game.cpp.o
+.PHONY : src/Game.cpp.o
+
+src/Game.i: src/Game.cpp.i
+
+.PHONY : src/Game.i
+
+# target to preprocess a source file
+src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Game.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Game.cpp.i
+.PHONY : src/Game.cpp.i
+
+src/Game.s: src/Game.cpp.s
+
+.PHONY : src/Game.s
+
+# target to generate assembly for a file
+src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Game.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Game.cpp.s
+.PHONY : src/Game.cpp.s
+
+src/HumanPlayer.o: src/HumanPlayer.cpp.o
+
+.PHONY : src/HumanPlayer.o
+
+# target to build an object file
+src/HumanPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/HumanPlayer.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/HumanPlayer.cpp.o
+.PHONY : src/HumanPlayer.cpp.o
+
+src/HumanPlayer.i: src/HumanPlayer.cpp.i
+
+.PHONY : src/HumanPlayer.i
+
+# target to preprocess a source file
+src/HumanPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/HumanPlayer.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/HumanPlayer.cpp.i
+.PHONY : src/HumanPlayer.cpp.i
+
+src/HumanPlayer.s: src/HumanPlayer.cpp.s
+
+.PHONY : src/HumanPlayer.s
+
+# target to generate assembly for a file
+src/HumanPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/HumanPlayer.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/HumanPlayer.cpp.s
+.PHONY : src/HumanPlayer.cpp.s
+
+src/Logic.o: src/Logic.cpp.o
+
+.PHONY : src/Logic.o
+
+# target to build an object file
+src/Logic.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Logic.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Logic.cpp.o
+.PHONY : src/Logic.cpp.o
+
+src/Logic.i: src/Logic.cpp.i
+
+.PHONY : src/Logic.i
+
+# target to preprocess a source file
+src/Logic.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Logic.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Logic.cpp.i
+.PHONY : src/Logic.cpp.i
+
+src/Logic.s: src/Logic.cpp.s
+
+.PHONY : src/Logic.s
+
+# target to generate assembly for a file
+src/Logic.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Logic.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Logic.cpp.s
+.PHONY : src/Logic.cpp.s
+
+src/Path.o: src/Path.cpp.o
+
+.PHONY : src/Path.o
+
+# target to build an object file
+src/Path.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Path.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Path.cpp.o
+.PHONY : src/Path.cpp.o
+
+src/Path.i: src/Path.cpp.i
+
+.PHONY : src/Path.i
+
+# target to preprocess a source file
+src/Path.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Path.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Path.cpp.i
+.PHONY : src/Path.cpp.i
+
+src/Path.s: src/Path.cpp.s
+
+.PHONY : src/Path.s
+
+# target to generate assembly for a file
+src/Path.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Path.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Path.cpp.s
+.PHONY : src/Path.cpp.s
+
+src/Player.o: src/Player.cpp.o
+
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Player.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Player.cpp.o
+.PHONY : src/Player.cpp.o
+
+src/Player.i: src/Player.cpp.i
+
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Player.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Player.cpp.i
+.PHONY : src/Player.cpp.i
+
+src/Player.s: src/Player.cpp.s
+
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Player.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Player.cpp.s
+.PHONY : src/Player.cpp.s
+
+src/Point.o: src/Point.cpp.o
+
+.PHONY : src/Point.o
+
+# target to build an object file
+src/Point.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Point.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Point.cpp.o
+.PHONY : src/Point.cpp.o
+
+src/Point.i: src/Point.cpp.i
+
+.PHONY : src/Point.i
+
+# target to preprocess a source file
+src/Point.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Point.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Point.cpp.i
+.PHONY : src/Point.cpp.i
+
+src/Point.s: src/Point.cpp.s
+
+.PHONY : src/Point.s
+
+# target to generate assembly for a file
+src/Point.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Point.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Point.cpp.s
+.PHONY : src/Point.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -372,36 +723,69 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ReversiAdvanced"
-	@echo "... Board.o"
-	@echo "... Board.i"
-	@echo "... Board.s"
-	@echo "... ComPlayer.o"
-	@echo "... ComPlayer.i"
-	@echo "... ComPlayer.s"
-	@echo "... Game.o"
-	@echo "... Game.i"
-	@echo "... Game.s"
-	@echo "... HumanPlayer.o"
-	@echo "... HumanPlayer.i"
-	@echo "... HumanPlayer.s"
-	@echo "... Logic.o"
-	@echo "... Logic.i"
-	@echo "... Logic.s"
-	@echo "... Path.o"
-	@echo "... Path.i"
-	@echo "... Path.s"
-	@echo "... Player.o"
-	@echo "... Player.i"
-	@echo "... Player.s"
-	@echo "... Point.o"
-	@echo "... Point.i"
-	@echo "... Point.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... run_tests"
+	@echo "... run_main"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest_main"
+	@echo "... gtest"
+	@echo "... Test/BoardTest.o"
+	@echo "... Test/BoardTest.i"
+	@echo "... Test/BoardTest.s"
+	@echo "... Test/ComPlayerTest.o"
+	@echo "... Test/ComPlayerTest.i"
+	@echo "... Test/ComPlayerTest.s"
+	@echo "... Test/GameTest.o"
+	@echo "... Test/GameTest.i"
+	@echo "... Test/GameTest.s"
+	@echo "... Test/Gtest_main.o"
+	@echo "... Test/Gtest_main.i"
+	@echo "... Test/Gtest_main.s"
+	@echo "... Test/HumanPlayerTest.o"
+	@echo "... Test/HumanPlayerTest.i"
+	@echo "... Test/HumanPlayerTest.s"
+	@echo "... Test/LogicTest.o"
+	@echo "... Test/LogicTest.i"
+	@echo "... Test/LogicTest.s"
+	@echo "... Test/PathTest.o"
+	@echo "... Test/PathTest.i"
+	@echo "... Test/PathTest.s"
+	@echo "... Test/PointTest.o"
+	@echo "... Test/PointTest.i"
+	@echo "... Test/PointTest.s"
+	@echo "... src/Board.o"
+	@echo "... src/Board.i"
+	@echo "... src/Board.s"
+	@echo "... src/ComPlayer.o"
+	@echo "... src/ComPlayer.i"
+	@echo "... src/ComPlayer.s"
+	@echo "... src/Game.o"
+	@echo "... src/Game.i"
+	@echo "... src/Game.s"
+	@echo "... src/HumanPlayer.o"
+	@echo "... src/HumanPlayer.i"
+	@echo "... src/HumanPlayer.s"
+	@echo "... src/Logic.o"
+	@echo "... src/Logic.i"
+	@echo "... src/Logic.s"
+	@echo "... src/Path.o"
+	@echo "... src/Path.i"
+	@echo "... src/Path.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/Point.o"
+	@echo "... src/Point.i"
+	@echo "... src/Point.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

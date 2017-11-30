@@ -1,23 +1,23 @@
-# 209127596
-# hassidi
+# Alon Vita 311233431
 
-a.out: Board.o main.o Game.o Player.o HumanPlayer.o Player.o
-	g++ Board.o main.o Game.o Player.o HumanPlayer.o Player.o
+CXX = g++
+#CXXFLAGS = -std=c++0x
+RM = rm -f
+#LIBS = -pthread -lboost_serialization -I.
 
-Board.o: Board.cpp Board.h GlobalDef.h
-	g++ -c Board.cpp
 
-main.o: main.cpp Game.h
-	g++ -c main.cpp
+a.out: core.o makeO
+	$(CXX) $(CXXFLAGS) @compile.txt
 
-Game.o: Game.cpp Game.h GlobalDef.h
-	g++ -c Game.cpp
+core.o:
+	find src -name "*.cpp" > sources.txt
+	$(CXX) $(CXXFLAGS) -c @sources.txt
 
-HumanPlayer.o: HumanPlayer.cpp HumanPlayer.h GlobalDef.h
-	g++ -c HumanPlayer.cpp
-
-Player.o: Player.cpp Player.h GlobalDef.h
-	g++ -c Player.cpp
+makeO:
+	find -name "*.o" > compile.txt
+	sed -i '/cmake-build-debug/d' ./compile.txt
 
 clean:
-	rm *.o *.out
+	$(RM) *.o
+	$(RM) sources.txt
+	$(RM) compile.txt
