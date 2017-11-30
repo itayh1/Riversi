@@ -38,7 +38,7 @@ public:
 
 private:
 	//board of the game
-	Board b;
+	Board* b;
 	//players of the game
     Player *player1, *player2;
 	Logic *logic;

@@ -23,19 +23,20 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
         vector<Path> newMoves;
         opponentScore = -1 * boardPanels;
         //copy of the board
-        logic = new Logic(*(board.getCopy()));
+        logic = new Logic(board.getCopy());
         //make move
         logic->reverseCells(*it, this->sign);
         //logic->getBoard().print();
         //options of the opponent
         newMoves = logic->availablePoints(newMoves, opponentSign);
         if (newMoves.size() == 0) {
+            delete logic;
             return it->getSource();
         }
         for (innerIt = newMoves.begin(); innerIt != newMoves.end(); ++innerIt) {
-            opponetLogic = new Logic(*(logic->getBoard().getCopy()));
+            opponetLogic = new Logic(logic->getBoard()->getCopy());
             opponetLogic->reverseCells(*innerIt, opponetLogic->switchSign(this->sign));
-            Board tempBoard = opponetLogic->getBoard();
+            Board tempBoard = *opponetLogic->getBoard();
             tempScore = tempBoard.countSign(opponentSign) - tempBoard.countSign(sign);
             if (tempScore > opponentScore) {
                 opponentScore = tempScore;

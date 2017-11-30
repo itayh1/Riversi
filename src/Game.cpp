@@ -5,10 +5,12 @@
  */
 #include "../headers/Game.h"
 
-Game::Game() : b(8)
+#define BOARD_SIZE 4
+Game::Game()
 {
     player1 = new HumanPlayer(black);
     //player2 = new ComPlayer(white);
+	this->b = new Board(BOARD_SIZE);
 	logic = new Logic(b);
 }
 
@@ -35,13 +37,13 @@ void Game::play() {
 			player = switchPlayer(player);
 			if (logic->availablePoints(pathVector, player->getSign()).size() == 0) {
 				running = false;
-				b.print();
+				b->print();
 			}
 			continue;
 		}
-		b.print();
+		b->print();
 
-		pnt.setPoint(player->getPoint(pathVector, this->b));
+		pnt.setPoint(player->getPoint(pathVector, *this->b));
 		for (it = pathVector.begin(); it != pathVector.end(); ++it) {
 			if (it->getSource().GetX() == pnt.GetX() && it->getSource().GetY() == pnt.GetY()) {
 				validInput = true;
@@ -61,7 +63,7 @@ void Game::play() {
 		pathVector.clear();
 	}
 	pathVector.clear();
-    printWinner(this->b);
+    printWinner(*this->b);
     cout << "Game ended" << endl;
 }
 

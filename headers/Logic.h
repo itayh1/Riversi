@@ -14,7 +14,7 @@
 
 class Logic {
 public:
-    Logic(Board b);
+    Logic(Board *b);
     ~Logic();
     /**
 	 * @param paths list of paths
@@ -24,11 +24,11 @@ public:
     vector<Path> availablePoints(vector<Path> pathVector,
                                  int player);
     void reverseCells(Path path, int player);
-    Board getBoard();
+    Board* getBoard();
     int switchSign(int sign);
 
 private:
-    Board board;
+    Board *board;
 
 
 };
