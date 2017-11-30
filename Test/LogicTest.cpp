@@ -8,11 +8,11 @@
 #include "../headers/Logic.h"
 
 TEST(LogicTest, reversePlayerWhite) {
-    Logic logic(Board(8));
+    Logic logic(new Board(8));
     EXPECT_EQ(logic.switchSign(white), black);
 }
 
 TEST(LogicTest, reversePlayerBlack) {
-    Logic logic(Board(8));
+    Logic logic(new Board(8));
     EXPECT_EQ(logic.switchSign(black), white);
 }
