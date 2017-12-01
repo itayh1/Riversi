@@ -29,7 +29,7 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
         //logic->getBoard().print();
         //options of the opponent
         newMoves = logic->availablePoints(newMoves, opponentSign);
-        if (newMoves.size() == 0) {
+        if (newMoves.empty()) {
             delete logic;
             return it->getSource();
         }

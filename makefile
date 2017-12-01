@@ -1,4 +1,5 @@
-# Alon Vita 311233431
+#Nadav Gross 206844920
+#Itay Hassid 209127596
 
 CXX = g++
 #CXXFLAGS = -std=c++0x

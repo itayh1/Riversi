@@ -42,8 +42,8 @@ TEST(PathTest, isSrcEqualNegative) {
     Point p1(-1, -2);
     Point p2(-2, -1);
     Path path(p1, p2);
-    EXPECT_TRUE(path.getSource().GetX() == -1);
-    EXPECT_TRUE(path.getSource().GetY() == -2);
+    EXPECT_EQ(path.getSource().GetX(), -1);
+    EXPECT_EQ(path.getSource().GetY(), -2);
 }
 
 TEST(PathTest, isDstEqualNegative) {

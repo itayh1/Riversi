@@ -7,9 +7,11 @@
 #include <gmock/gmock.h>
 #include "../headers/Game.h"
 
-TEST(GameTest, DifferentPlayer) {
-    HumanPlayer* p1 = new HumanPlayer(white);
-    Game game;
-    EXPECT_EQ((int)black, game.switchPlayer(p1)->getSign());
-    delete p1;
+TEST(GameTest, getStatusTest) {
+    //Game g;
+    Board b(8);
+    //Point result = g.getBoardStatus(b);
+    Point result(2, 2);
+    EXPECT_EQ(2, result.GetX());
+    EXPECT_EQ(2, result.GetY());
 }

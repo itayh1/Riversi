@@ -50,15 +50,17 @@ void Board::print() {
 
 		for (int y = 0; y < size; y++) {
 			switch(board[x][y]) {
-			case black:
-				cout << " x |";
-				break;
-			case white:
-				cout << " o |";
-				break;
-			case blank:
-				cout << "   |";
-				break;
+				case black:
+					cout << " x |";
+					break;
+				case white:
+					cout << " o |";
+					break;
+				case blank:
+					cout << "   |";
+					break;
+				default:
+					break;
 			}
 		}
 		cout << endl;

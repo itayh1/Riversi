@@ -35,17 +35,20 @@ public:
     * @return opponent
     */
     Player* switchPlayer(Player *player);
+    Point getBoardStatus(Board b);
+
 
 private:
 	//board of the game
 	Board* b;
 	//players of the game
-    Player *player1, *player2;
+    Player *player1;
+    Player *player2;
 	Logic *logic;
 	//vector<Path> availablePoints(vector<Path> paths, Player *player);
 	//bool isValidPoint(int player, int x, int y);
 	//void reverseCells(Path path, Player *player);
-    void printWinner(Board b);
+    void printWinner(Point result);
 };
 
 

@@ -12,7 +12,7 @@ set(SOURCE_FILES
         # Board
         headers/Board.h src/Board.cpp
         # Game
-        src/Game.cpp headers/Game.h
+      src/Game.cpp headers/Game.h
         # Global Definitions
         headers/GlobalDef.h
         # Player

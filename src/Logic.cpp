@@ -74,4 +74,3 @@ int Logic::switchSign(int sign) {
         return white;
     return black;
 }
-

@@ -5,7 +5,7 @@
  */
 #include "../headers/Game.h"
 
-#define BOARD_SIZE 4
+#define BOARD_SIZE 2
 Game::Game()
 {
     player1 = new HumanPlayer(black);
@@ -33,9 +33,9 @@ void Game::play() {
 	chooseMenu();
 	while (running) {
 		pathVector = logic->availablePoints(pathVector, player->getSign());
-		if (pathVector.size() == 0) {
+		if (pathVector.empty()) {
 			player = switchPlayer(player);
-			if (logic->availablePoints(pathVector, player->getSign()).size() == 0) {
+			if (logic->availablePoints(pathVector, player->getSign()).empty()) {
 				running = false;
 				b->print();
 			}
@@ -63,7 +63,7 @@ void Game::play() {
 		pathVector.clear();
 	}
 	pathVector.clear();
-    printWinner(*this->b);
+    printWinner(getBoardStatus(*this->b));
     cout << "Game ended" << endl;
 }
 
@@ -73,9 +73,7 @@ Player* Game::switchPlayer(Player *player) {
 	}
 	return player1;
 }
-
-
-void Game::printWinner(Board b) {
+Point Game::getBoardStatus(Board b) {
     int i,j, temp;
     int size = b.getSize(), blackCounter = 0, whiteCounter = 0;
     for(i = 0; i < size; i++) {
@@ -88,6 +86,12 @@ void Game::printWinner(Board b) {
             }
         }
     }
+    return Point(blackCounter, whiteCounter);
+}
+
+void Game::printWinner(Point result) {
+    int blackCounter = result.GetX();
+    int whiteCounter = result.GetY();
     cout << endl;
     if (blackCounter > whiteCounter) {
         cout << "X is the winner!";
