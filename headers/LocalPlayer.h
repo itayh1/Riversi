@@ -1,0 +1,39 @@
+//
+// Created by itay on 05/12/17.
+//
+
+#ifndef LOCALPLAYER_H
+#define LOCALPLAYER_H
+
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include "GlobalDef.h"
+#include "Player.h"
+#include "Board.h"
+#include "Client.h"
+
+using namespace std;
+
+class LocalPlayer :  public Player {
+public:
+    LocalPlayer(int sign);
+    /**
+    * @param paths list of paths
+    * @return the the user chose
+    */
+    Point getPoint(vector<Path> paths, Board board);
+    /**
+     * @return the the sign ofthe player
+     */
+    int getSign();
+    //print the moved this player played.
+    void printMovePlayed(Point &p);
+
+private:
+    Client *client;
+};
+
+
+#endif //LOCALPLAYER_H
