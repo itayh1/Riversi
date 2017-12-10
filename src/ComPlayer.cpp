@@ -55,7 +55,7 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
     return bestPoint;
 }
 
-void ComPlayer::printMovePlayed(Point &p) {
+void ComPlayer::movePlayed(Point &p) {
     char ch = sign == black ? 'X' : 'O';
     cout << ch << " played ";
     p.PrintPoint();

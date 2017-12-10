@@ -21,7 +21,7 @@ public:
     //virtual ~Player() {};
     virtual Point getPoint(vector<Path> paths, Board board) = 0;
     virtual int getSign() = 0;
-    virtual void printMovePlayed(Point &p) = 0;
+    virtual void movePlayed(Point &p) = 0;
 protected:
     int sign;
 };

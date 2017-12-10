@@ -14,6 +14,8 @@
 #include "Path.h"
 #include "HumanPlayer.h"
 #include "ComPlayer.h"
+#include "LocalPlayer.h"
+#include "RemotePlayer.h"
 #include "Logic.h"
 using namespace std;
 

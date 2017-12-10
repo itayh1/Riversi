@@ -28,7 +28,7 @@ public:
      */
     int getSign();
     //print the moved this player played.
-    void printMovePlayed(Point &p);
+    void movePlayed(Point &p);
 private:
     //int min(int num1, int )
 };

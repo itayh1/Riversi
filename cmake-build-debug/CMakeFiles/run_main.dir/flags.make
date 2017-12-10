@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++98
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include -I/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include 
+CXX_INCLUDES = -I/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include -I/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include 
 

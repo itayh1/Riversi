@@ -7,8 +7,11 @@
 #define REVERSIADVANCED_POINT_H
 
 
-#include <list>
+//#include <list>
+#include <string>
+#include <sstream>
 #include "Point.h"
+
 using namespace std;
 
 class Point {
@@ -52,6 +55,7 @@ public:
     /**
      * prints the point.
      */
+    std::string toString();
     void PrintPoint();
     void setPoint(Point o);
 

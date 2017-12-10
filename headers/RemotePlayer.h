@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits>
+#include <sstream>
 #include "GlobalDef.h"
 #include "Player.h"
 #include "Board.h"
@@ -17,7 +18,8 @@
 using namespace std;
 
 class RemotePlayer : public Player{
-    RemotePlayer(int sign);
+public:
+    RemotePlayer(Client *cl, int sign);
     /**
      * @param paths list of paths
      * @return the the user chose
@@ -28,7 +30,7 @@ class RemotePlayer : public Player{
      */
     int getSign();
     //print the moved this player played.
-    void printMovePlayed(Point &p);
+    void movePlayed(Point &p);
 
 private:
     Client *client;

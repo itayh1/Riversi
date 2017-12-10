@@ -46,8 +46,17 @@ void Client::connectToServer() {
 
 void Client::readFromServer(char *buffer) {
     int n;
-    n = read(clientSocket, &buffer, sizeof(buffer));
+    bzero(buffer,256);
+    n = read(clientSocket, buffer, sizeof(buffer));
     if (n == -1) {
         throw "Error reading result from socket";
+    }
+}
+
+void Client::writeToServer(char *buffer, int size) {
+    int n;
+    n = write(this->clientSocket, buffer, size);
+    if (n < 0) {
+        cout << "Error writing to socket" << endl;
     }
 }

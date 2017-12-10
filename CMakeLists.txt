@@ -26,7 +26,13 @@ set(SOURCE_FILES
         # Com Player
         src/ComPlayer.cpp headers/ComPlayer.h
         # Logic
-        src/Logic.cpp headers/Logic.h)
+        src/Logic.cpp headers/Logic.h
+        # Client
+        src/Client.cpp headers/Client.h
+        # Local Player
+        src/LocalPlayer.cpp headers/LocalPlayer.h
+        # Remote Player
+        src/RemotePlayer.cpp headers/RemotePlayer.h)
 
 set(TEST_FILES
         # Point Test

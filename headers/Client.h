@@ -20,6 +20,7 @@ public:
     Client(const char* serverIP, int serverPort);
     void connectToServer();
     void readFromServer(char *buffer);
+    void writeToServer(char *buffer, int size);
 private:
     const char *serverIP;
     int serverPort;

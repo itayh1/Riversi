@@ -4,14 +4,17 @@
  *
  */
 #include "../headers/Game.h"
+#include <sstream>
 
-#define BOARD_SIZE 2
+#define BOARD_SIZE 4
+
 Game::Game()
 {
-    player1 = new HumanPlayer(black);
+    //player1 = new HumanPlayer(black);
     //player2 = new ComPlayer(white);
 	this->b = new Board(BOARD_SIZE);
 	logic = new Logic(b);
+	chooseMenu();
 }
 
 Game::~Game()
@@ -30,7 +33,7 @@ void Game::play() {
     Point p1(0, 0), p2(0, 0);
 	Path path(p1, p2);
     Point pnt(0, 0);
-	chooseMenu();
+	//chooseMenu();
 	while (running) {
 		pathVector = logic->availablePoints(pathVector, player->getSign());
 		if (pathVector.empty()) {
@@ -54,7 +57,7 @@ void Game::play() {
 			}
 		}
 		if (validInput) {
-			player->printMovePlayed(pnt);
+			player->movePlayed(pnt);
 			player = switchPlayer(player);
 			validInput = false;
 		} else {
@@ -108,14 +111,45 @@ void Game::chooseMenu() {
 	cout << "Choose between the 2 next options:" << endl;
 	cout << "1. VS. human player." << endl;
 	cout << "2. VS. AI player." << endl;
-	cin >> option;
-	while(option != 1 && option != 2) {
-		cout << "invalid option. choose option 1 or 2..." << endl;
+	cout << "3. a remote player." << endl;
+	//cin >> option;
+	option = 3;
+	while(option != 1 && option != 2 && option != 3) {
+		cout << "invalid option. choose option 1 or 2 or 3..." << endl;
 		cin >> option;
 	}
 	if (option == 1) {
+		player1 = new HumanPlayer(black);
 		player2 = new HumanPlayer(white);
-	} else {
+	} else if (option == 2){
+		player1 = new HumanPlayer(black);
 		player2 = new ComPlayer(white);
+	} else {
+		char buffer[1024];
+		int serverSign;
+		Client *cl = new Client("127.0.0.1",6666);
+		try {
+			cl->connectToServer();
+		} catch (const char *msg) {
+			cout << "Failed to connect to server. Reason: " << msg << endl;
+			exit(-1);
+		}
+		cl->readFromServer(buffer);
+		try {
+			//serverSign = atoi(buffer);
+			string str(buffer);
+			std::istringstream(str) >> serverSign;
+		} catch(const exception& e) {
+			throw("couldn't get message");
+		}
+		if (serverSign == 1) {
+			player1 = new LocalPlayer(cl, black);
+			player2 = new RemotePlayer(cl, white);
+		} else if (serverSign == 2) {
+			player1 = new RemotePlayer(cl, black);
+			player2 = new LocalPlayer(cl, white);
+		} else {
+			printf("Invalid message from the server");
+		}
 	}
 }

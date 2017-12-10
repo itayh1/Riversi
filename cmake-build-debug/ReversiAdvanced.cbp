@@ -8,84 +8,84 @@
 		<Option virtualFolders="CMake Files\;CMake Files\lib\;CMake Files\lib\googletest-master\;CMake Files\lib\googletest-master\googlemock\;CMake Files\lib\googletest-master\googlemock\cmake\;CMake Files\lib\googletest-master\googletest\;CMake Files\lib\googletest-master\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="run_tests">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/run_tests" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/run_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -96,21 +96,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_tests"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_tests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="run_tests/fast">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/run_tests" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/run_tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -121,21 +121,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_tests/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_tests/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="run_main">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/run_main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/run_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -146,21 +146,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="run_main/fast">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/run_main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/run_main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -171,23 +171,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 run_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -198,23 +198,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -225,23 +225,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -252,23 +252,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock/fast">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -279,21 +279,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -304,21 +304,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -329,21 +329,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -354,21 +354,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest"/>
+				<Option output="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
-					<Add directory="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include"/>
+					<Add directory="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest"/>
 					<Add directory="/usr/include/c++/5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
 					<Add directory="/usr/include/c++/5/backward"/>
@@ -379,205 +379,229 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/itay/CLionProjects/Riversi/cmake-build-debug/lib/googletest-master/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/Test/BoardTest.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/Test/BoardTest.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/Test/ComPlayerTest.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/Test/ComPlayerTest.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/Test/GameTest.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/Test/GameTest.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/Test/Gtest_main.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/Test/Gtest_main.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/Test/HumanPlayerTest.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/Test/HumanPlayerTest.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/Test/LogicTest.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/Test/LogicTest.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/Test/PathTest.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/Test/PathTest.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/Test/PointTest.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/Test/PointTest.cpp">
 			<Option target="run_tests"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/Board.h">
-			<Option target="run_tests"/>
-			<Option target="run_main"/>
-		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/ComPlayer.h">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/Board.h">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/Game.h">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/Client.h">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/GlobalDef.h">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/ComPlayer.h">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/HumanPlayer.h">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/Game.h">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/Logic.h">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/GlobalDef.h">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/Path.h">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/HumanPlayer.h">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/Player.h">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/LocalPlayer.h">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/headers/Point.h">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/Logic.h">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/src/gmock-all.cc">
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/Path.h">
+			<Option target="run_tests"/>
+			<Option target="run_main"/>
+		</Unit>
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/Player.h">
+			<Option target="run_tests"/>
+			<Option target="run_main"/>
+		</Unit>
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/Point.h">
+			<Option target="run_tests"/>
+			<Option target="run_main"/>
+		</Unit>
+		<Unit filename="/home/itay/CLionProjects/Riversi/headers/RemotePlayer.h">
+			<Option target="run_tests"/>
+			<Option target="run_main"/>
+		</Unit>
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/src/gmock-all.cc">
 			<Option target="gmock_main"/>
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/src/gmock_main.cc">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/src/gtest-all.cc">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/src/gtest-all.cc">
 			<Option target="gmock_main"/>
 			<Option target="gmock"/>
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/src/gtest_main.cc">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/Board.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/Board.cpp">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/ComPlayer.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/Client.cpp">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/Game.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/ComPlayer.cpp">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/HumanPlayer.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/Game.cpp">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/Logic.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/HumanPlayer.cpp">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/Path.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/LocalPlayer.cpp">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/Player.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/Logic.cpp">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/Point.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/Path.cpp">
 			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/src/main.cpp">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/Player.cpp">
+			<Option target="run_tests"/>
 			<Option target="run_main"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/Point.cpp">
+			<Option target="run_tests"/>
+			<Option target="run_main"/>
+		</Unit>
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/RemotePlayer.cpp">
+			<Option target="run_tests"/>
+			<Option target="run_main"/>
+		</Unit>
+		<Unit filename="/home/itay/CLionProjects/Riversi/src/main.cpp">
+			<Option target="run_main"/>
+		</Unit>
+		<Unit filename="/home/itay/CLionProjects/Riversi/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/CMakeLists.txt">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\lib\googletest-master\googletest\cmake\"/>
 		</Unit>
 	</Project>

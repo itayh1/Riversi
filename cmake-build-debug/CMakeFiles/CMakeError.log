@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/itay/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8206e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8206e.dir/build.make CMakeFiles/cmTC_8206e.dir/build
-make[1]: Entering directory '/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8206e.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_8206e.dir/CheckSymbolExists.c.o   -c /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_8206e
-/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8206e.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8206e.dir/CheckSymbolExists.c.o  -o cmTC_8206e 
-CMakeFiles/cmTC_8206e.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_ffa7b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ffa7b.dir/build.make CMakeFiles/cmTC_ffa7b.dir/build
+make[1]: Entering directory '/home/itay/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ffa7b.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ffa7b.dir/CheckSymbolExists.c.o   -c /home/itay/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_ffa7b
+/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffa7b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ffa7b.dir/CheckSymbolExists.c.o  -o cmTC_ffa7b 
+CMakeFiles/cmTC_ffa7b.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_8206e.dir/build.make:97: recipe for target 'cmTC_8206e' failed
-make[1]: *** [cmTC_8206e] Error 1
-make[1]: Leaving directory '/home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_8206e/fast' failed
-make: *** [cmTC_8206e/fast] Error 2
+CMakeFiles/cmTC_ffa7b.dir/build.make:97: recipe for target 'cmTC_ffa7b' failed
+make[1]: *** [cmTC_ffa7b] Error 1
+make[1]: Leaving directory '/home/itay/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ffa7b/fast' failed
+make: *** [cmTC_ffa7b/fast] Error 2
 
-File /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/itay/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 

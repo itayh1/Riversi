@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
+RM = /home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nadavgross/CLionProjects/Riversi
+CMAKE_SOURCE_DIR = /home/itay/CLionProjects/Riversi
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nadavgross/CLionProjects/Riversi/cmake-build-debug
+CMAKE_BINARY_DIR = /home/itay/CLionProjects/Riversi/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,37 +59,37 @@ CMAKE_BINARY_DIR = /home/nadavgross/CLionProjects/Riversi/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -105,7 +105,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -116,7 +116,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/nadavgross/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/itay/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -126,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itay/CLionProjects/Riversi/cmake-build-debug/CMakeFiles /home/itay/CLionProjects/Riversi/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nadavgross/CLionProjects/Riversi/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itay/CLionProjects/Riversi/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -480,6 +480,36 @@ src/Board.cpp.s:
 	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Board.cpp.s
 .PHONY : src/Board.cpp.s
 
+src/Client.o: src/Client.cpp.o
+
+.PHONY : src/Client.o
+
+# target to build an object file
+src/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Client.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Client.cpp.o
+.PHONY : src/Client.cpp.o
+
+src/Client.i: src/Client.cpp.i
+
+.PHONY : src/Client.i
+
+# target to preprocess a source file
+src/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Client.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Client.cpp.i
+.PHONY : src/Client.cpp.i
+
+src/Client.s: src/Client.cpp.s
+
+.PHONY : src/Client.s
+
+# target to generate assembly for a file
+src/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/Client.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Client.cpp.s
+.PHONY : src/Client.cpp.s
+
 src/ComPlayer.o: src/ComPlayer.cpp.o
 
 .PHONY : src/ComPlayer.o
@@ -569,6 +599,36 @@ src/HumanPlayer.cpp.s:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/HumanPlayer.cpp.s
 	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/HumanPlayer.cpp.s
 .PHONY : src/HumanPlayer.cpp.s
+
+src/LocalPlayer.o: src/LocalPlayer.cpp.o
+
+.PHONY : src/LocalPlayer.o
+
+# target to build an object file
+src/LocalPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/LocalPlayer.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/LocalPlayer.cpp.o
+.PHONY : src/LocalPlayer.cpp.o
+
+src/LocalPlayer.i: src/LocalPlayer.cpp.i
+
+.PHONY : src/LocalPlayer.i
+
+# target to preprocess a source file
+src/LocalPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/LocalPlayer.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/LocalPlayer.cpp.i
+.PHONY : src/LocalPlayer.cpp.i
+
+src/LocalPlayer.s: src/LocalPlayer.cpp.s
+
+.PHONY : src/LocalPlayer.s
+
+# target to generate assembly for a file
+src/LocalPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/LocalPlayer.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/LocalPlayer.cpp.s
+.PHONY : src/LocalPlayer.cpp.s
 
 src/Logic.o: src/Logic.cpp.o
 
@@ -690,6 +750,36 @@ src/Point.cpp.s:
 	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/Point.cpp.s
 .PHONY : src/Point.cpp.s
 
+src/RemotePlayer.o: src/RemotePlayer.cpp.o
+
+.PHONY : src/RemotePlayer.o
+
+# target to build an object file
+src/RemotePlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/RemotePlayer.cpp.o
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/RemotePlayer.cpp.o
+.PHONY : src/RemotePlayer.cpp.o
+
+src/RemotePlayer.i: src/RemotePlayer.cpp.i
+
+.PHONY : src/RemotePlayer.i
+
+# target to preprocess a source file
+src/RemotePlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/RemotePlayer.cpp.i
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/RemotePlayer.cpp.i
+.PHONY : src/RemotePlayer.cpp.i
+
+src/RemotePlayer.s: src/RemotePlayer.cpp.s
+
+.PHONY : src/RemotePlayer.s
+
+# target to generate assembly for a file
+src/RemotePlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/src/RemotePlayer.cpp.s
+	$(MAKE) -f CMakeFiles/run_main.dir/build.make CMakeFiles/run_main.dir/src/RemotePlayer.cpp.s
+.PHONY : src/RemotePlayer.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -762,6 +852,9 @@ help:
 	@echo "... src/Board.o"
 	@echo "... src/Board.i"
 	@echo "... src/Board.s"
+	@echo "... src/Client.o"
+	@echo "... src/Client.i"
+	@echo "... src/Client.s"
 	@echo "... src/ComPlayer.o"
 	@echo "... src/ComPlayer.i"
 	@echo "... src/ComPlayer.s"
@@ -771,6 +864,9 @@ help:
 	@echo "... src/HumanPlayer.o"
 	@echo "... src/HumanPlayer.i"
 	@echo "... src/HumanPlayer.s"
+	@echo "... src/LocalPlayer.o"
+	@echo "... src/LocalPlayer.i"
+	@echo "... src/LocalPlayer.s"
 	@echo "... src/Logic.o"
 	@echo "... src/Logic.i"
 	@echo "... src/Logic.s"
@@ -783,6 +879,9 @@ help:
 	@echo "... src/Point.o"
 	@echo "... src/Point.i"
 	@echo "... src/Point.s"
+	@echo "... src/RemotePlayer.o"
+	@echo "... src/RemotePlayer.i"
+	@echo "... src/RemotePlayer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

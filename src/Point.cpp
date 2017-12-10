@@ -41,3 +41,9 @@ void Point::setPoint(Point o) {
     this->x = o.x;
     this->y = o.y;
 }
+
+std::string Point::toString() {
+    stringstream num;
+    num << x << "," << y;
+    return num.str();
+}

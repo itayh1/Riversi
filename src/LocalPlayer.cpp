@@ -2,33 +2,12 @@
 // Created by itay on 05/12/17.
 //
 
-#include "LocalPlayer.h"
-#include <sstream>
+#include "../headers/LocalPlayer.h"
+
 using namespace std;
 
-LocalPlayer::LocalPlayer(int sign) : Player(sign) {
-    this->client = new Client("127.0.0.1", 9090);
-    try {
-        this->client->connectToServer();
-    } catch (const char *msg) {
-        cout << "Failed to connect to server. Reason: " << msg << endl;
-        exit(-1);
-    }
-    char buffer[1024];
-    int servSign = blank;
-    this->client->readFromServer(buffer);
-    try {
-        servSign = atoi(buffer);
-        string str(buffer);
-        std::istringstream(str) >> servSign;
-    } catch(const exception& e) {
-        throw("couldn't get message");
-    }
-    if (servSign != black && servSign != white ) {
-        throw("invalid message from client.");
-    }
-    this->sign = servSign;
-
+LocalPlayer::LocalPlayer(Client *cl, int sign) : Player(sign) {
+    this->client = cl;
 }
 
 int LocalPlayer::getSign() {
@@ -36,12 +15,47 @@ int LocalPlayer::getSign() {
 }
 
 Point LocalPlayer::getPoint(vector<Path> paths, Board board) {
-    return Point();
+    Point p;
+    int row, col;
+    char playerMark = (sign == black) ? 'X' : 'O';
+    cout << playerMark << ":It's your move" << endl << "Your possible moves: ";
+    printOptions(paths);
+    cout << endl << "Please enter your move row(space)col: ";
+    cin >> row >> col;
+    if (cin.fail()) {
+        cin.clear();
+        cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+        return p;
+    }
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    p.SetX(row - 1);
+    p.SetY(col - 1);
+    return p;
 }
 
-void LocalPlayer::printMovePlayed(Point &p) {
+void LocalPlayer::printOptions(vector<Path> paths) {
+    vector<Path> ::iterator it, temp;
+    for (it = paths.begin(); it != paths.end(); ++it)
+    {
+        temp = it;
+        if (++temp != paths.end())
+            if (it->getSource().GetX() == temp->getSource().GetX() &&
+                it->getSource().GetY() == temp->getSource().GetY()) {
+                continue;
+            }
+        printf("(%d, %d) ", it->getSource().GetX() + 1, it->getSource().GetY() + 1);
+    }
+}
+
+void LocalPlayer::movePlayed(Point &p) {
     char ch = sign == black ? 'X' : 'O';
     cout << ch << " played ";
     p.PrintPoint();
+
+    std::string str = p.toString();
+    char *buffer = new char[str.length()];
+    strncpy(buffer, str.c_str(), str.length());
+    //buffer[str.length()] = '\0';
+    this->client->writeToServer(buffer, str.length());
 }
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g    -Wall -Wshadow -Werror -DGTEST_HAS_PTHREAD=1 -fexceptions -Wex
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest/include -I/home/nadavgross/CLionProjects/Riversi/lib/googletest-master/googletest 
+CXX_INCLUDES = -I/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest/include -I/home/itay/CLionProjects/Riversi/lib/googletest-master/googletest 
 

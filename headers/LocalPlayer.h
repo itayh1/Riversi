@@ -8,6 +8,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits>
 #include <string>
 #include "GlobalDef.h"
 #include "Player.h"
@@ -18,7 +19,7 @@ using namespace std;
 
 class LocalPlayer :  public Player {
 public:
-    LocalPlayer(int sign);
+    LocalPlayer(Client *cl, int sign);
     /**
     * @param paths list of paths
     * @return the the user chose
@@ -29,10 +30,11 @@ public:
      */
     int getSign();
     //print the moved this player played.
-    void printMovePlayed(Point &p);
+    void movePlayed(Point &p);
 
 private:
     Client *client;
+    void printOptions(vector<Path> paths);
 };
 
 

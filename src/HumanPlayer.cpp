@@ -4,7 +4,6 @@
  *
  */
 #include "../headers/HumanPlayer.h"
-//using namespace std;
 
 HumanPlayer::HumanPlayer(int playerSign) : Player(playerSign) {} //{sign = sign1;}
 
@@ -47,7 +46,7 @@ void HumanPlayer::printOptions(vector<Path> paths) {
     }
 }
 
-void HumanPlayer::printMovePlayed(Point &p) {
+void HumanPlayer::movePlayed(Point &p) {
     /*char ch = sign == black ? 'X' : 'O';
     cout << ch << " played ";
     p.PrintPoint();*/
