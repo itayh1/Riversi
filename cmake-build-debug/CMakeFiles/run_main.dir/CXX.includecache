@@ -175,6 +175,8 @@ iostream
 /home/itay/CLionProjects/Riversi/headers/Game.h
 sstream
 -
+fstream
+-
 
 /home/itay/CLionProjects/Riversi/src/HumanPlayer.cpp
 ../headers/HumanPlayer.h

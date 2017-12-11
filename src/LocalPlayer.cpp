@@ -1,5 +1,6 @@
 //
-// Created by itay on 05/12/17.
+// Nadav Gross 206844920
+// Itay Hassid 209127596
 //
 
 #include "../headers/LocalPlayer.h"
@@ -48,16 +49,20 @@ void LocalPlayer::printOptions(vector<Path> paths) {
 }
 
 void LocalPlayer::movePlayed(Point &p) {
-    char ch = sign == black ? 'X' : 'O';
-    cout << ch << " played ";
-    p.PrintPoint();
-
-    std::string str = p.toString();
-    int length = str.length() + 1;
-    char *buffer = new char[length];
-    strncpy(buffer, str.c_str(), length);
-    //printf("%s", buffer);
-    //buffer[str.length()] = '\0';
-    this->client->writeToServer(buffer, length);
+    if (p.GetX() != -1) {
+        char ch = sign == black ? 'X' : 'O';
+        cout << ch << " played ";
+        p.PrintPoint();
+        cout << endl;
+        std::string str = p.toString();
+        int length = str.length() + 1;
+        char *buffer = new char[length];
+        strncpy(buffer, str.c_str(), length);
+        //printf("%s", buffer);
+        //buffer[str.length()] = '\0';
+        this->client->writeToServer(buffer, length);
+    } else {
+        this->client->writeToServer("NoMove",7);
+    }
 }
 
