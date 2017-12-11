@@ -5,8 +5,9 @@
  */
 #include "../headers/Game.h"
 #include <sstream>
+#include <fstream>
 
-#define BOARD_SIZE 4
+#define BOARD_SIZE 3
 
 Game::Game()
 {
@@ -34,11 +35,15 @@ void Game::play() {
 	Path path(p1, p2);
     Point pnt(0, 0);
 	//chooseMenu();
+    Point noMoves(-1, -1);
 	while (running) {
 		pathVector = logic->availablePoints(pathVector, player->getSign());
 		if (pathVector.empty()) {
+            //pnt.setPoint(player->getPoint(pathVector, *this->b));
+            player->movePlayed(noMoves);
 			player = switchPlayer(player);
 			if (logic->availablePoints(pathVector, player->getSign()).empty()) {
+
 				running = false;
 				b->print();
 			}
@@ -47,6 +52,10 @@ void Game::play() {
 		b->print();
 
 		pnt.setPoint(player->getPoint(pathVector, *this->b));
+        if (pnt.GetX() == -1) {
+            player = switchPlayer(player);
+            continue;
+        }
 		for (it = pathVector.begin(); it != pathVector.end(); ++it) {
 			if (it->getSource().GetX() == pnt.GetX() && it->getSource().GetY() == pnt.GetY()) {
 				validInput = true;
@@ -112,8 +121,8 @@ void Game::chooseMenu() {
 	cout << "1. VS. human player." << endl;
 	cout << "2. VS. AI player." << endl;
 	cout << "3. a remote player." << endl;
-	//cin >> option;
-	option = 3;
+	cin >> option;
+	//option = 3;
 	while(option != 1 && option != 2 && option != 3) {
 		cout << "invalid option. choose option 1 or 2 or 3..." << endl;
 		cin >> option;
@@ -127,7 +136,15 @@ void Game::chooseMenu() {
 	} else {
 		char buffer[1024];
 		int serverSign;
-		Client *cl = new Client("127.0.0.1",6666);
+        ifstream inFile;
+        inFile.open("clientSetting");
+        string ip;
+        int port;
+        inFile >> ip;
+        inFile >> port;
+        cout << port << endl;
+        const char *ip_c = ip.c_str();
+		Client *cl = new Client(ip_c, port);
 		try {
 			cl->connectToServer();
 		} catch (const char *msg) {

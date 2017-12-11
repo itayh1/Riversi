@@ -1,5 +1,6 @@
 //
-// Created by itay on 05/12/17.
+// Nadav Gross 206844920
+// Itay Hassid 209127596
 //
 
 #include "../headers/RemotePlayer.h"
@@ -15,11 +16,17 @@ int RemotePlayer::getSign() {
 Point RemotePlayer::getPoint(vector<Path> paths, Board board) {
     char buffer[512];
     int x, y;
+    cout << "waiting to opponent move" << endl;
     this->client->readFromServer(buffer);
     string str(buffer);
-    istringstream(str.substr(0,1)) >> x;
-    istringstream(str.substr(2,1)) >> y;
-    return Point(x,y);
+    //cout << str << endl;
+    if (str.compare("NoMove") == 0) {
+        return Point(-1, -1);
+    } else {
+        istringstream(str.substr(0, 1)) >> x;
+        istringstream(str.substr(2, 1)) >> y;
+        return Point(x, y);
+    }
 }
 
 
