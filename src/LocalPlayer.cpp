@@ -53,9 +53,11 @@ void LocalPlayer::movePlayed(Point &p) {
     p.PrintPoint();
 
     std::string str = p.toString();
-    char *buffer = new char[str.length()];
-    strncpy(buffer, str.c_str(), str.length());
+    int length = str.length() + 1;
+    char *buffer = new char[length];
+    strncpy(buffer, str.c_str(), length);
+    //printf("%s", buffer);
     //buffer[str.length()] = '\0';
-    this->client->writeToServer(buffer, str.length());
+    this->client->writeToServer(buffer, length);
 }
 

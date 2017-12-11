@@ -34,7 +34,7 @@ int Point::GetY() {
 }
 
 void Point::PrintPoint() {
-    cout << "(" << this->x + 1 << "," << this->y + 1 << ")";
+    cout << "(" << (this->x + 1) << "," << (this->y + 1) << ")";
 }
 
 void Point::setPoint(Point o) {
