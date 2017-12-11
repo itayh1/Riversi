@@ -25,6 +25,7 @@ public:
     * @param paths list of paths
     * @return the the user chose
     */
+    ~LocalPlayer();
     Point getPoint(vector<Path> paths, Board board);
     /**
      * @return the the sign ofthe player
@@ -32,6 +33,7 @@ public:
     int getSign();
     //print the moved this player played.
     void movePlayed(Point &p);
+    void gameEnded();
 
 private:
     Client *client;

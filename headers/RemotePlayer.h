@@ -32,6 +32,7 @@ public:
     int getSign();
     //print the moved this player played.
     void movePlayed(Point &p);
+    void gameEnded();
 
 private:
     Client *client;

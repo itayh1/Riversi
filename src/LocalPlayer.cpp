@@ -11,6 +11,10 @@ LocalPlayer::LocalPlayer(Client *cl, int sign) : Player(sign) {
     this->client = cl;
 }
 
+LocalPlayer::~LocalPlayer() {
+    delete this->client;
+}
+
 int LocalPlayer::getSign() {
     return this->sign;
 }
@@ -66,3 +70,6 @@ void LocalPlayer::movePlayed(Point &p) {
     }
 }
 
+void LocalPlayer::gameEnded() {
+    this->client->writeToServer("End", 3);
+}

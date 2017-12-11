@@ -56,7 +56,13 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
 }
 
 void ComPlayer::movePlayed(Point &p) {
+    if (p.GetX() > 0 && p.GetY() > 0)
+        return;
     char ch = sign == black ? 'X' : 'O';
     cout << ch << " played ";
     p.PrintPoint();
+}
+
+void ComPlayer::gameEnded() {
+
 }

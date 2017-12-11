@@ -36,3 +36,7 @@ void RemotePlayer::movePlayed(Point &p) {
     p.PrintPoint();
 }
 
+void RemotePlayer::gameEnded() {
+
+}
+

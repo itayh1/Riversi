@@ -51,3 +51,7 @@ void HumanPlayer::movePlayed(Point &p) {
     cout << ch << " played ";
     p.PrintPoint();*/
 }
+
+void HumanPlayer::gameEnded() {
+
+}

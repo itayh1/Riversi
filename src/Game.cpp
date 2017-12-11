@@ -43,7 +43,7 @@ void Game::play() {
             player->movePlayed(noMoves);
 			player = switchPlayer(player);
 			if (logic->availablePoints(pathVector, player->getSign()).empty()) {
-
+                player->gameEnded();
 				running = false;
 				b->print();
 			}
