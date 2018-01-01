@@ -31,6 +31,10 @@ public:
 	void play();
     //runs the menu.
 	void chooseMenu();
+	//runs menu for remote connection
+	void remoteMenu();
+	// print the list of games from the buffer
+	void printGames(char buffer[256]);
     /**
     * switch the current player to the opponent
     * @param player current

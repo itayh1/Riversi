@@ -7,7 +7,7 @@
 #include <sstream>
 #include <fstream>
 
-#define BOARD_SIZE 3
+#define BOARD_SIZE 8
 
 Game::Game()
 {
@@ -134,39 +134,93 @@ void Game::chooseMenu() {
 		player1 = new HumanPlayer(black);
 		player2 = new ComPlayer(white);
 	} else {
-		char buffer[1024];
-		int serverSign;
-        ifstream inFile;
-        inFile.open("clientSetting");
-        string ip;
-        int port;
-        inFile >> ip;
-        inFile >> port;
-        cout << port << endl;
-        const char *ip_c = ip.c_str();
-		Client *cl = new Client(ip_c, port);
-		try {
-			cl->connectToServer();
-		} catch (const char *msg) {
-			cout << "Failed to connect to server. Reason: " << msg << endl;
-			exit(-1);
-		}
-		cl->readFromServer(buffer);
-		try {
-			//serverSign = atoi(buffer);
-			string str(buffer);
-			std::istringstream(str) >> serverSign;
-		} catch(const exception& e) {
-			throw("couldn't get message");
-		}
-		if (serverSign == 1) {
-			player1 = new LocalPlayer(cl, black);
-			player2 = new RemotePlayer(cl, white);
-		} else if (serverSign == 2) {
-			player1 = new RemotePlayer(cl, black);
-			player2 = new LocalPlayer(cl, white);
-		} else {
-			printf("Invalid message from the server");
-		}
+        remoteMenu();
 	}
 }
+
+void Game::remoteMenu() {
+    char buffer[1024];
+    int serverSign;
+    bool flag = true;
+    ifstream inFile;
+    inFile.open("clientSetting");
+    string ip;
+    int port;
+    inFile >> ip;
+    inFile >> port;
+    cout << port << endl;
+    const char *ip_c = ip.c_str();
+    Client *cl = new Client(ip_c, port);
+    try {
+        cl->connectToServer();
+    } catch (const char *msg) {
+        cout << "Failed to connect to server. Reason: " << msg << endl;
+        exit(-1);
+    }
+    while (flag) {
+        int option;
+        string str, msg;
+        char buffer[256];// = "hello,world,itay,moshe,avi";
+        cout << "Choose server option: " << endl;
+        cout << "1. start game" << endl;
+        cout << "2. list of games" << endl;
+        cout << "3. join game" << endl;
+        cin >> option;
+        cin.ignore();
+        switch (option)
+        {
+            case 1:
+                cout << "Choose name for the game: ";
+                getline(cin, str);
+                msg = "start ";
+                msg.append(str);
+                strcpy(buffer, msg.c_str());
+                cl->writeToServer(buffer, 7 + (int)str.length());
+                break;
+            case 2:
+                cl->writeToServer("list_games", 11);
+                cl->readFromServer(buffer);
+                printGames(buffer);
+                break;
+            case 3:
+                cout << "Choose name of game to join to: ";
+                getline(cin, str);
+                msg = "join ";
+                msg.append(str);
+                strcpy(buffer, msg.c_str());
+                cl->writeToServer(buffer, 6 + (int)str.length());
+                flag = false;
+                break;
+            default:
+                cout << "Invalid option" << endl;
+                break;
+        }
+    }
+    cl->readFromServer(buffer);
+    try {
+        //serverSign = atoi(buffer);
+        string str(buffer);
+        std::istringstream(str) >> serverSign;
+    } catch(const exception& e) {
+        throw("couldn't get message");
+    }
+    if (serverSign == 1) {
+        player1 = new LocalPlayer(cl, black);
+        player2 = new RemotePlayer(cl, white);
+    } else if (serverSign == 2) {
+        player1 = new RemotePlayer(cl, black);
+        player2 = new LocalPlayer(cl, white);
+    } else {
+        printf("Invalid message from the server");
+    }
+}
+
+void Game::printGames(char *buffer) {
+    string str;
+    stringstream ss(buffer);
+
+    while (getline(ss, str, ',')) {
+        cout << str << endl;
+    }
+}
+
