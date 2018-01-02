@@ -189,14 +189,17 @@ void Game::remoteMenu() {
                 msg.append(str);
                 strcpy(buffer, msg.c_str());
                 cl->writeToServer(buffer, 6 + (int)str.length());
-                flag = false;
+                cl->readFromServer(buffer);
+                if (strcmp(buffer, "1") == 0 || strcmp(buffer, "2") == 0) {
+                    flag = false;
+                }
                 break;
             default:
                 cout << "Invalid option" << endl;
                 break;
         }
     }
-    cl->readFromServer(buffer);
+    //cl->readFromServer(buffer);
     try {
         //serverSign = atoi(buffer);
         string str(buffer);
