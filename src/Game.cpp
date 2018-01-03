@@ -51,8 +51,8 @@ void Game::play() {
 			continue;
 		}
 		b->print();
-
-		pnt.setPoint(player->getPoint(pathVector, *this->b));
+        Point* temp = player->getPoint(pathVector, *this->b);
+		pnt.setPoint(temp);
         if (pnt.GetX() == -1) {
             player = switchPlayer(player);
             continue;

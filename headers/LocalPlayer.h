@@ -26,7 +26,7 @@ public:
     * @return the the user chose
     */
     ~LocalPlayer();
-    Point getPoint(vector<Path> paths, Board board);
+    Point * getPoint(vector<Path> paths, Board board);
     /**
      * @return the the sign ofthe player
      */

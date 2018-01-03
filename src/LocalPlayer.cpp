@@ -19,7 +19,7 @@ int LocalPlayer::getSign() {
     return this->sign;
 }
 
-Point LocalPlayer::getPoint(vector<Path> paths, Board board) {
+Point * LocalPlayer::getPoint(vector<Path> paths, Board board) {
     Point p;
     int row, col;
     char playerMark = (sign == black) ? 'X' : 'O';
@@ -30,12 +30,12 @@ Point LocalPlayer::getPoint(vector<Path> paths, Board board) {
     if (cin.fail()) {
         cin.clear();
         cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-        return p;
+        return p.getCopy();
     }
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     p.SetX(row - 1);
     p.SetY(col - 1);
-    return p;
+    return p.getCopy();
 }
 
 void LocalPlayer::printOptions(vector<Path> paths) {

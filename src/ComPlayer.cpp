@@ -11,7 +11,7 @@ int ComPlayer::getSign() {
     return sign;
 }
 
-Point ComPlayer::getPoint(vector<Path> paths, Board board) {
+Point * ComPlayer::getPoint(vector<Path> paths, Board board) {
     vector<Path> ::iterator it, innerIt;
     Point bestPoint, opponentBestPoint;
     int boardPanels = board.getSize() * board.getSize();
@@ -31,7 +31,7 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
         newMoves = logic->availablePoints(newMoves, opponentSign);
         if (newMoves.empty()) {
             delete logic;
-            return it->getSource();
+            return it->getSource().getCopy();
         }
         for (innerIt = newMoves.begin(); innerIt != newMoves.end(); ++innerIt) {
             opponetLogic = new Logic(logic->getBoard()->getCopy());
@@ -52,7 +52,7 @@ Point ComPlayer::getPoint(vector<Path> paths, Board board) {
         newMoves.clear();
         delete logic;
     }
-    return bestPoint;
+    return bestPoint.getCopy();
 }
 
 void ComPlayer::movePlayed(Point &p) {

@@ -47,3 +47,13 @@ std::string Point::toString() {
     num << x << "," << y;
     return num.str();
 }
+
+Point *Point::getCopy() {
+    return new Point(this->x, this->y);
+}
+
+void Point::setPoint(Point *ptr) {
+    this->x = ptr->GetX();
+    this->y = ptr->GetY();
+    delete ptr;
+}

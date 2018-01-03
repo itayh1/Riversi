@@ -47,8 +47,9 @@ void Client::connectToServer() {
 
 void Client::readFromServer(char *buffer) {
     ssize_t n;
-    bzero(buffer,1023);
-    n = read(clientSocket, buffer, 1023);
+    //bzero(buffer,500);
+    memset(buffer, 0, 512);
+    n = read(clientSocket, buffer, 512);
     if (n == -1) {
         throw "Error reading result from socket";
     }

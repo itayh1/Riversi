@@ -19,7 +19,7 @@ public:
     //Player();
     Player(int playerSign) { sign = playerSign;};
     //virtual ~Player() {};
-    virtual Point getPoint(vector<Path> paths, Board board) = 0;
+    virtual Point * getPoint(vector<Path> paths, Board board) = 0;
     virtual int getSign() = 0;
     virtual void movePlayed(Point &p) = 0;
     virtual void gameEnded() = 0;

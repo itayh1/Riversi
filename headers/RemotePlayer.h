@@ -25,7 +25,7 @@ public:
      * @param paths list of paths
      * @return the the user chose
      */
-    Point getPoint(vector<Path> paths, Board board);
+    Point * getPoint(vector<Path> paths, Board board);
     /**
      * @return the the sign ofthe player
      */

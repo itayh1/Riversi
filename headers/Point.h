@@ -58,6 +58,8 @@ public:
     std::string toString();
     void PrintPoint();
     void setPoint(Point o);
+    void setPoint(Point* ptr);
+    Point* getCopy();
 
 };
 
