@@ -8,6 +8,7 @@
 #include <fstream>
 
 #define BOARD_SIZE 8
+#define BUFFER_SIZE 1024
 
 Game::Game()
 {
@@ -139,7 +140,7 @@ void Game::chooseMenu() {
 }
 
 void Game::remoteMenu() {
-    char buffer[1024];
+    char buffer[BUFFER_SIZE];
     int serverSign;
     bool flag = true;
     ifstream inFile;
@@ -160,7 +161,7 @@ void Game::remoteMenu() {
     while (flag) {
         int option;
         string str, msg;
-        char buffer[256];// = "hello,world,itay,moshe,avi";
+        //char buffer[256];// = "hello,world,itay,moshe,avi";
         cout << "Choose server option: " << endl;
         cout << "1. start game" << endl;
         cout << "2. list of games" << endl;
@@ -176,6 +177,10 @@ void Game::remoteMenu() {
                 msg.append(str);
                 strcpy(buffer, msg.c_str());
                 cl->writeToServer(buffer, 7 + (int)str.length());
+                cl->readFromServer(buffer);
+                if (strcmp(buffer, "1") == 0 || strcmp(buffer, "2") == 0) {
+                    flag = false;
+                }
                 break;
             case 2:
                 cl->writeToServer("list_games", 11);
