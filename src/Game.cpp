@@ -4,7 +4,6 @@
  *
  */
 #include "../headers/Game.h"
-#include <sstream>
 #include <fstream>
 
 #define BOARD_SIZE 8
@@ -41,6 +40,7 @@ void Game::play() {
 		pathVector = logic->availablePoints(pathVector, player->getSign());
 		if (pathVector.empty()) {
             //pnt.setPoint(player->getPoint(pathVector, *this->b));
+            cout << player->getSign() << " has no moves" << endl;
             player->movePlayed(noMoves);
 			player = switchPlayer(player);
 			if (logic->availablePoints(pathVector, player->getSign()).empty()) {
@@ -226,9 +226,9 @@ void Game::remoteMenu() {
 void Game::printGames(char *buffer) {
     string str;
     stringstream ss(buffer);
-
+    cout << "Avalible games:" << endl;
     while (getline(ss, str, ',')) {
-        cout << str << endl;
+        cout << "-" << str << endl;
     }
 }
 
